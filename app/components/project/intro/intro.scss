@@ -124,6 +124,7 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.10);
     backdrop-filter: blur(15px);
+    overflow: hidden;
     &::before {
         content: "";
         width: 1205px;
