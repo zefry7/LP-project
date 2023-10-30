@@ -74,6 +74,7 @@
     "lodash": "latest",
     "prettier": "latest",
     "run-sequence": "latest",
+    "swiper": "^6.8.4",
     "vinyl-buffer": "latest",
     "vinyl-ftp": "latest",
     "vinyl-source-stream": "latest",
