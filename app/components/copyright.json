@@ -1,0 +1,49 @@
+{
+  "og": {
+    "title": "<?= $share->title ?>",
+    "description": "<?= $share->description ?>",
+    "canonical_url": "<?= $share->canonical_url ?>",
+    "fb_app_id": "",
+    "image": {
+      "default": {
+        "val": "<?= $share->image ?>",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "#image": {
+      "default": {
+        "val": "<?= $share->image['fb'] ?>",
+        "width": 1200,
+        "height": 630
+      },
+      "vk": "<?= $share->image['vk'] ?>",
+      "tw": "<?= $share->image['tw'] ?>"
+    }
+  },
+  "intro": {
+    "header": {
+      "logoImg": "../images/intro/display/logo-header.png",
+      "links": ["Главная", "О лотерее", "Победители", "Как участвовать", "безопасность", "приложение"]
+    },
+    "main": {
+      "title": "Открывайте Россию с «Русским лото»!",
+      "price": "от 800 000 000 ₽",
+      "tv": {
+        "img": "../images/intro/display/logo-tv.png",
+        "text": "Смотрите трансляцию тиража в 8:20 на НТВ"
+      },
+      "button": "Купить билеты",
+      "labelImg": "../images/intro/display/label-img.png",
+      "mainImg": [
+        "../images/intro/display/main-1.png",
+        "../images/intro/display/main-2.png",
+        "../images/intro/display/main-3.png",
+        "../images/intro/display/main-4.png",
+        "../images/intro/display/main-5.png"
+      ],
+      "name": ["КАМЧАТКА", "КАРЕЛИЯ", "КАВКАЗ", "АЛТАЙ", "БАЙКАЛ"]
+    }
+  }
+
+}

@@ -1,0 +1,25 @@
+mixin ttt(value)
+    p=value
+
+mixin intro(content)
+    section.intro-section 
+        header.intro-section__header 
+            .intro-section__logo 
+                img(src=content.header.logoImg, alt="")
+            nav.intro-section__links   
+                each v in content.header.links
+                    a.intro-section(href="#")= v
+        .intro-section__main 
+            .intro-section__left-block
+                h5.intro-section__title= content.main.title
+                p.intro-section__price= content.main.price
+                .intro-section__tv-row 
+                    .intro-section__tv-img
+                        img(src=content.main.tv.img, alt="")
+                    p.intro-section__tv-text= content.main.tv.text
+                button.intro-section__button= content.main.button
+            .intro-section__right-block
+                .intro-section__img-label 
+                    img(src=content.main.labelImg, alt="")
+                .intro-section__name 
+                    +carousel(content.main.name, "ttt")(data-carousel="carouselMain")
