@@ -101,7 +101,7 @@
   }
 }
 
-@mixin option($n, $v, $vm:$v,){
+@mixin option($n, $v, $vm:$v){
   @include DESKTOP {
     $n: vh($v)
   }
@@ -116,4 +116,3 @@
   }
 }
 
-@include option(width, 200);

@@ -3,15 +3,16 @@ mixin ttt(value)
 
 mixin intro(content)
     section.intro-section 
+        .intro-section__decor
         header.intro-section__header 
             .intro-section__logo 
                 img(src=content.header.logoImg, alt="")
             nav.intro-section__links   
                 each v in content.header.links
-                    a.intro-section(href="#")= v
+                    a.intro-section__link(href="#")= v
         .intro-section__main 
             .intro-section__left-block
-                h5.intro-section__title= content.main.title
+                h2.intro-section__title= content.main.title
                 p.intro-section__price= content.main.price
                 .intro-section__tv-row 
                     .intro-section__tv-img
@@ -21,5 +22,6 @@ mixin intro(content)
             .intro-section__right-block
                 .intro-section__img-label 
                     img(src=content.main.labelImg, alt="")
-                .intro-section__name 
-                    +carousel(content.main.name, "ttt")(data-carousel="carouselMain")
+                .intro-section__name= content.main.name[0]
+
+                    //- +carousel(content.main.name, "ttt")(data-carousel="carouselMain")
