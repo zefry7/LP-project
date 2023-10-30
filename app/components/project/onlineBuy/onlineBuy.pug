@@ -1,0 +1,18 @@
+mixin onlineBuy(content)  
+  section.onlineBuy-section
+    .onlineBuy-section__row 
+      h2.onlineBuy-section__title 
+      .onlineBuy-section__video 
+        p.onlineBuy-section__video-text 
+        .onlineBuy-section__button-img 
+          img(src="", alt="")
+    .onlineBuy-section__list 
+      each v in content.imgItems
+        .onlineBuy-section__column 
+          .onlineBuy-section__img 
+            img(src=v.img, alt="")
+          p.onlineBuy-section__name= v.name
+          p.onlineBuy-section__text= v.text
+    button.onlineBuy-section__button
+
+

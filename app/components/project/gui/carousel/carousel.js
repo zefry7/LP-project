@@ -20,20 +20,10 @@ const PRESETS = {
     freeMode: true
   },
   carouselMain: {
-    direction: 'vertical',
-    loop: true,
-
+    direction: "horizontal",
     pagination: {
       el: '.swiper-pagination',
-    },
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    scrollbar: {
-      el: '.swiper-scrollbar',
+      type: 'bullets',
     },
   }
 };

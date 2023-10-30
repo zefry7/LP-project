@@ -1,6 +1,3 @@
-mixin ttt(value)
-    p=value
-
 mixin intro(content)
     section.intro-section 
         .intro-section__decor
@@ -22,5 +19,8 @@ mixin intro(content)
             .intro-section__right-block
                 .intro-section__img-label 
                     img(src=content.main.labelImg, alt="")
-                .intro-section__name= content.main.name[0]
-                    +carousel(content.main.name, "ttt")(data-carousel="carouselMain")
+        //- +carousel(content.main.name, "nameSwiper")(data-carousel="carouselMain")
+
+mixin nameSwiper(value)
+    p.intro-section__name&attributes(attributes)=value
+

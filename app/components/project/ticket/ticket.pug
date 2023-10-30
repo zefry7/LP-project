@@ -3,5 +3,12 @@ mixin ticket(content)
         p.ticket-section__label= content.label
         p.ticket-section__title= content.title
         p.ticket-section__subtitle= content.subtitle
-        
+        ul.ticket-section__list
+            each v in content.items 
+                li.ticket-section__item=v.text
+        button.ticket-section__button= content.button
+        p.ticket-section__private(href="#")= content.private
+        .ticket-section__decor 
+            img(src=content.decorImg, alt="")
+
         
