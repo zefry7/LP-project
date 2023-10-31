@@ -15,7 +15,8 @@ mixin intro(content)
                     .intro-section__tv-img
                         img(src=content.main.tv.img, alt="")
                     p.intro-section__tv-text= content.main.tv.text
-                button.intro-section__button= content.main.button
+                +button(content.main.button)
+                //- button.intro-section__button= content.main.button
             .intro-section__right-block
                 .intro-section__img-label 
                     img(src=content.main.labelImg, alt="")
