@@ -1,15 +1,16 @@
 import $ from "../../../vendor/jquery";
-import {$window} from "../../dom";
+import { $window } from "../../dom";
 
 
 const $header = $(".header");
 
 export function anchorSmoothScroll() {
-  $(document).on('click', 'a', function (event) {
-    const $item = $($.attr(this, 'href').replace("/", ""));
-    if (!$item.length) return;
+  $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
-    moveToElement($item);
+    console.log(this);
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
   });
 }
 

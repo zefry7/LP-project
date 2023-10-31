@@ -23,8 +23,46 @@
   },
   "intro": {
     "header": {
-      "logoImg": "../images/intro/display/logo-header.png",
-      "links": ["Главная", "О лотерее", "Победители", "Как участвовать", "безопасность", "приложение"]
+      "logoImg": {
+        "img": "../images/intro/display/logo-header.png",
+        "alt": "Логотип",
+        "source": [
+          {
+            "srcSet": "../images/intro/display/logo-header.png",
+            "media": "(min-width: 768px)"
+          },
+          {
+            "srcSet": "../images/intro/mobile/logo-header.png",
+            "media": "(max-width: 768px)"
+          }
+        ]
+      },
+      "links": [
+        {
+          "label": "Главная",
+          "href": "#"
+        },
+        {
+          "label": "О лотерее",
+          "href": "#ticket-section"
+        },
+        {
+          "label": "Победители",
+          "href": "#"
+        },        
+        {
+          "label": "Как участвовать",
+          "href": "#"
+        },        
+        {
+          "label": "безопасность",
+          "href": "#"
+        },
+        {
+          "label": "приложение",
+          "href": "#"
+        }
+      ]
     },
     "main": {
       "title": "Открывайте Россию с «Русским лото»!",
@@ -33,16 +71,97 @@
         "img": "../images/intro/display/logo-tv.png",
         "text": "Смотрите трансляцию тиража в 8:20 на НТВ"
       },
-      "button": "Купить билеты",
+      "button": {
+        "text": "Купить билеты"
+      },
       "labelImg": "../images/intro/display/label-img.png",
-      "mainImg": [
-        "../images/intro/display/main-1.png",
-        "../images/intro/display/main-2.png",
-        "../images/intro/display/main-3.png",
-        "../images/intro/display/main-4.png",
-        "../images/intro/display/main-5.png"
-      ],
-      "name": ["КАМЧАТКА", "КАРЕЛИЯ", "КАВКАЗ", "АЛТАЙ", "БАЙКАЛ"]
+      "bc": [
+        {
+          "img": {
+            "img": "../images/intro/display/main-1.png",
+            "alt": "Фон",
+            "source": [
+              {
+                "srcSet": "../images/intro/display/main-1.png",
+                "media": "(min-width: 768px)"
+              },
+              {
+                "srcSet": "../images/intro/mobile/main-1.png",
+                "media": "(max-width: 768px)"
+              }
+            ]
+          },
+          "name": "КАМЧАТКА"
+        },
+        {
+          "img": {
+            "img": "../images/intro/display/main-2.png",
+            "alt": "Фон",
+            "source": [
+              {
+                "srcSet": "../images/intro/display/main-2.png",
+                "media": "(min-width: 768px)"
+              },
+              {
+                "srcSet": "../images/intro/mobile/main-2.png",
+                "media": "(max-width: 768px)"
+              }
+            ]
+          },
+          "name": "КАРЕЛИЯ"
+        },
+        {
+          "img": {
+            "img": "../images/intro/display/main-3.png",
+            "alt": "Фон",
+            "source": [
+              {
+                "srcSet": "../images/intro/display/main-3.png",
+                "media": "(min-width: 768px)"
+              },
+              {
+                "srcSet": "../images/intro/mobile/main-3.png",
+                "media": "(max-width: 768px)"
+              }
+            ]
+          },
+          "name": "КАВКАЗ"
+        },
+        {
+          "img": {
+            "img": "../images/intro/display/main-4.png",
+            "alt": "Фон",
+            "source": [
+              {
+                "srcSet": "../images/intro/display/main-4.png",
+                "media": "(min-width: 768px)"
+              },
+              {
+                "srcSet": "../images/intro/mobile/main-4.png",
+                "media": "(max-width: 768px)"
+              }
+            ]
+          },
+          "name": "АЛТАЙ"
+        },
+        {
+          "img": {
+            "img": "../images/intro/display/main-5.png",
+            "alt": "Фон",
+            "source": [
+              {
+                "srcSet": "../images/intro/display/main-5.png",
+                "media": "(min-width: 768px)"
+              },
+              {
+                "srcSet": "../images/intro/mobile/main-5.png",
+                "media": "(max-width: 768px)"
+              }
+            ]
+          },
+          "name": "БАЙКАЛ"
+        }
+      ]
     }
   },
   "ticket": {
@@ -81,7 +200,8 @@
         "img": "../images/onlineBuy/display/item-1.png",
         "name": "Безопасность данных",
         "text": "Мы не сохраняем номера банковских карт, платёжные пароли и другие данные, которые вы вводите при оплате билетов. Вся информация хранится только на стороне платёжной системы, которую вы выбираете сами. "
-      },      {
+      },
+      {
         "img": "../images/onlineBuy/display/item-2.png",
         "name": "Государственные лотереи",
         "text": "Организаторами всех лотерей в России являются Министерство спорта и Министерство финансов. Они следят за тем, чтобы все розыгрыши проводились честно, а победители вовремя получали выигрыши."
@@ -95,32 +215,33 @@
     "button": "Купить билеты"
   },
   "download": {
-      "title": "Скачайте мобильное приложение «Столото»",
-      "items": [
-        {
-          "img": "../images/download/display/line-1.svg",
-          "text": "Удобная и безопасная оплата"
-        },
-        {
-          "img": "../images/download/display/line-2.svg",
-          "text": "Быстрый вывод денег на карту"
-        },
-        {
-          "img": "../images/download/display/line-3.svg",
-          "text": "Лотереи всегда под рукой"
-        },        {
-          "img": "../images/download/display/line-4.svg",
-          "text": "Push-уведомления о выигрышах"
-        }
-      ],
-      "buttons": [
-        "../images/download/display/button-1.svg",
-        "../images/download/display/button-2.svg",
-        "../images/download/display/button-3.svg",
-        "../images/download/display/button-4.svg",
-        "../images/download/display/button-5.svg"
-      ],
-      "decor": "../images/download/display/tel-img.png"
+    "title": "Скачайте мобильное приложение «Столото»",
+    "items": [
+      {
+        "img": "../images/download/display/line-1.svg",
+        "text": "Удобная и безопасная оплата"
+      },
+      {
+        "img": "../images/download/display/line-2.svg",
+        "text": "Быстрый вывод денег на карту"
+      },
+      {
+        "img": "../images/download/display/line-3.svg",
+        "text": "Лотереи всегда под рукой"
+      },
+      {
+        "img": "../images/download/display/line-4.svg",
+        "text": "Push-уведомления о выигрышах"
+      }
+    ],
+    "buttons": [
+      "../images/download/display/button-1.svg",
+      "../images/download/display/button-2.svg",
+      "../images/download/display/button-3.svg",
+      "../images/download/display/button-4.svg",
+      "../images/download/display/button-5.svg"
+    ],
+    "decor": "../images/download/display/tel-img.png"
   },
   "info": {
     "title": "Больше билетов «Русского лото» — больше впечатлений!",

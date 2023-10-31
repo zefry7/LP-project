@@ -1,27 +1,25 @@
 mixin intro(content)
     section.intro-section 
+        .intro-section__bc
+            +carousel(content.main.bc, "backgroundImg")(data-carousel="carouselMain")
+        .swiper-pagination
         .intro-section__decor
-        header.intro-section__header 
-            .intro-section__logo 
-                img(src=content.header.logoImg, alt="")
-            nav.intro-section__links   
-                each v in content.header.links
-                    a.intro-section__link(href="#")= v
         .intro-section__main 
             .intro-section__left-block
-                h2.intro-section__title= content.main.title
-                p.intro-section__price= content.main.price
+                h2.intro-section__title!=content.main.title
+                p.intro-section__price!=content.main.price
                 .intro-section__tv-row 
                     .intro-section__tv-img
-                        img(src=content.main.tv.img, alt="")
-                    p.intro-section__tv-text= content.main.tv.text
+                        img(src!=content.main.tv.img, alt="")
+                    p.intro-section__tv-text!=content.main.tv.text
                 +button(content.main.button)
-                //- button.intro-section__button= content.main.button
             .intro-section__right-block
                 .intro-section__img-label 
-                    img(src=content.main.labelImg, alt="")
-        //- +carousel(content.main.name, "nameSwiper")(data-carousel="carouselMain")
+                    img(src!=content.main.labelImg, alt="")
 
-mixin nameSwiper(value)
-    p.intro-section__name&attributes(attributes)=value
+mixin backgroundImg(content, param)
+    div&attributes(attributes)
+        .intro-section__swiper-img
+            +picture(content.img)
+        .intro-section__name!= content.name
 

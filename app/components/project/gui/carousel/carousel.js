@@ -1,7 +1,9 @@
 import $ from 'jquery';
 import { registerPlugins, Plugin } from '../../../framework/jquery/plugins/plugins.js';
 
-import Swiper from "swiper";
+import Swiper, {Mousewheel, Navigation, Pagination, Autoplay} from 'swiper';
+
+Swiper.use([Navigation,Pagination,Mousewheel, Autoplay]);
 
 const PRESETS = {
   default: {
@@ -21,6 +23,11 @@ const PRESETS = {
   },
   carouselMain: {
     direction: "horizontal",
+    speed: 500,
+    loop: "true",
+    autoplay: {
+      delay: 5000,
+    },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',

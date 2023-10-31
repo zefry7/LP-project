@@ -1,4 +1,6 @@
 import './utils/touch-device/touch-device';
+import './utils/anchor/checkAnchor';
+
 // GUI
 import "./gui/gui";
 
@@ -10,3 +12,4 @@ import "./preloader/preloader";
 
 // Страницы
 // -require('./p-example/p-example');
+

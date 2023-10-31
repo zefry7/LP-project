@@ -1,0 +1,8 @@
+.join {
+  // Константы
+  @mixin mod($mod) {
+    @include modifier("join", $mod){
+      @content;
+    }
+  }
+}

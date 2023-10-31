@@ -1,7 +1,7 @@
 import "../components/project/project";
 import "../components/project/_promise"
-
 import $ from "../components/vendor/jquery";
+import "../components/project/utils/anchor/checkAnchor";
 
 const {location} = global;
 global.jQuery = global.$ = $;
