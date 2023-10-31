@@ -1,7 +1,9 @@
 import "../components/project/project";
 import "../components/project/_promise"
 import $ from "../components/vendor/jquery";
-import "../components/project/utils/anchor/checkAnchor";
+import { anchorSmoothScroll } from "../components/project/utils/anchor/checkAnchor";
+
+anchorSmoothScroll()
 
 const {location} = global;
 global.jQuery = global.$ = $;

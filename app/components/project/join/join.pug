@@ -1,3 +1,20 @@
 mixin join(content, params)
-  .join&attributes(attributes)
-    block
+  section#join.join
+    h2.join__title!= content.title
+    .join__pagination 
+    .join__info 
+      +carousel(content.items, "infoJoin")(data-carousel="carouselJoin")
+    +button(content.button)
+
+mixin infoJoin(content, params)
+  div&attributes(attributes)
+    .join__block-text
+      p.join__page-label!= content.label
+      p.join__name!= content.name
+      p.join__text!= content.text
+      if(content.label == "2 из 4")
+          ul 
+            each v in content.lines 
+              li.join__text!=v
+    .join__img 
+      img(src!=content.img, alt="")

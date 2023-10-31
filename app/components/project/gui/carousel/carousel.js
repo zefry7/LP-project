@@ -32,6 +32,13 @@ const PRESETS = {
       el: '.swiper-pagination',
       type: 'bullets',
     },
+  },
+  carouselJoin: {
+    pagination: {
+      el: ".join__pagination",
+      type: "bullets",
+      clickable: true,
+    }
   }
 };
 
