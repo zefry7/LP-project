@@ -73,7 +73,7 @@
     "videoImg": "../images/onlineBuy/display/button.svg",
     "imgItems": [
       {
-        "img": "../images/onlineBuy/display/item-1.png",
+        "img": "../images/onlineBuy/display/item-4.svg",
         "name": "Безопасная регистрация",
         "text": "При регистрации вы указываете только свой электронный адрес и номер телефона. На этот номер мы будем отправлять вам смс с паролем для получения выигрышей на сайте. "
       },
@@ -91,6 +91,41 @@
         "name": "Ваш билет никогда не потеряется",
         "text": "Вся информация о купленных билетах хранится в вашем личном кабинете. Если возникнут проблемы, вы сможете обратиться в нашу службу поддержки. Мы всегда вам поможем."
       }
-    ]
+    ],
+    "button": "Купить билеты"
+  },
+  "download": {
+      "title": "Скачайте мобильное приложение «Столото»",
+      "items": [
+        {
+          "img": "../images/download/display/line-1.svg",
+          "text": "Удобная и безопасная оплата"
+        },
+        {
+          "img": "../images/download/display/line-2.svg",
+          "text": "Быстрый вывод денег на карту"
+        },
+        {
+          "img": "../images/download/display/line-3.svg",
+          "text": "Лотереи всегда под рукой"
+        },        {
+          "img": "../images/download/display/line-4.svg",
+          "text": "Push-уведомления о выигрышах"
+        }
+      ],
+      "buttons": [
+        "../images/download/display/button-1.svg",
+        "../images/download/display/button-2.svg",
+        "../images/download/display/button-3.svg",
+        "../images/download/display/button-4.svg",
+        "../images/download/display/button-5.svg"
+      ],
+      "decor": "../images/download/display/tel-img.png"
+  },
+  "info": {
+    "title": "Больше билетов «Русского лото» — больше впечатлений!",
+    "price": "от 800 000 000 ₽",
+    "button": "Купить билеты",
+    "decor": "../images/info/display/bag.png"
   }
 }

@@ -1,0 +1,102 @@
+.info-section {
+  padding: 165px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &::after {
+    content: "";
+    position: absolute;
+    left: -229px;
+    bottom: -260px;
+    display: inline-block;
+    width: 927.562px;
+    height: 683.782px;
+    opacity: 0.05;
+    background: url(../../../images/download/display/decor.svg) center/ 100% no-repeat;
+  }
+}
+.info-section__title{
+  margin-bottom: 112px;
+  width: 1000px;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 84px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.info-section__price {
+  margin-bottom: 183px;
+  color: #FEC74E;
+  font-family: Montserrat;
+  font-size: 74px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115.5%;
+  position: relative;
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 764px;
+    height: 136px;
+    top: -20px;
+    left: -32px;
+    fill: #FEC74E;
+    background: url(../../../images/info/display/price-border.svg) center/ 100% no-repeat;
+  }  
+  &::after {
+    content: "ДЖЕКПОТ";
+    position: absolute;
+    top: -40px;
+    left: 60px;
+    display: inline-block;
+    color: #FEC74E;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 41.229px; 
+    letter-spacing: 1.097px;
+    text-transform: uppercase;
+  }
+}
+.info-section__button {
+  align-self: center;
+  width: 465px;
+  height: 94px;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 116%; 
+  border-radius: 15px;
+  background: #E12D43;
+}
+.info-section__decor {
+  width: 940px;
+  height: 1003px;
+  position: absolute;
+  top: 64px;
+  right: -100px;
+  img {
+    position: relative;
+    z-index: 4;
+    max-width: 100%;
+    height: 100%;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 150px;
+    right: -220px;
+    display: inline-block;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 577px;
+    filter: blur(152px);
+    background: linear-gradient(175deg, #FFF -72.92%, rgba(255, 255, 255, 0.00) 83.07%);
+  }
+}

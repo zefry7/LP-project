@@ -1,0 +1,13 @@
+mixin download(content)
+  section.download-section
+    h2.download-section__title= content.title
+    ul.download-section__list 
+      each v in content.items
+        li.download-section__item-text= v.text
+    .download-section__buttons-row 
+      each v in content.buttons
+        .download-section__button 
+          img(src=v, alt="")
+    .download-section__decor 
+      img(src=content.decor, alt="")
+    
