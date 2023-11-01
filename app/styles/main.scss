@@ -1,17 +1,13 @@
 @import "base";
 
 @import "animations";
+@import "mixins";
+@import "adaptive";
 
 //@import "../components/framework/modal/modal";
 @import "./style-null.scss";
 @import "../components/project/project";
 
-.background-green {
-    overflow: hidden;
-    padding: 90px 100px 0;
-    background: #0F3017;
-    width: 100%;
-}
 
 .button {
     width: 465px;

@@ -103,16 +103,16 @@
 
 @mixin option($n, $v, $vm:$v){
   @include DESKTOP {
-    $n: vh($v)
+    #{$n}: vh($v)
   }
   @include TABLET-L {
-    $n: vh($v)
+    #{$n}: vw($v)
   }
   @include TABLET {
-    $n: vh($v)
+    #{$n}: vwt($v)
   }
   @include MOBILE {
-    $n: vh($v)
+    #{$n}: vwm($v)
   }
 }
 

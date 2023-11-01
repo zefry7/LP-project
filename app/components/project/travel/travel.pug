@@ -1,0 +1,15 @@
+mixin travel(content, params)
+  section.travel 
+    .travel__content 
+      h2.travel__title!= content.title
+      p.travel__text!= content.text
+      .travel__list 
+        +carousel(content.list, "travelList")(data-carousel="carouselTravel")
+      .travel__pagination
+      +button(content.button)
+
+mixin travelList(content, params)
+  div&attributes(attributes)
+    .travel__item
+      p.travel__item-title!= content.title
+      p.travel__item-text!= content.text

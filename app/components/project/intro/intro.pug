@@ -1,25 +1,25 @@
 mixin intro(content)
-    section.intro-section 
-        .intro-section__bc
+    section#intro.intro
+        .intro__bc
             +carousel(content.main.bc, "backgroundImg")(data-carousel="carouselMain")
         .swiper-pagination
-        .intro-section__decor
-        .intro-section__main 
-            .intro-section__left-block
-                h2.intro-section__title!=content.main.title
-                p.intro-section__price!=content.main.price
-                .intro-section__tv-row 
-                    .intro-section__tv-img
+        .intro__decor
+        .intro__main 
+            .intro__left-block
+                h2.intro__title!=content.main.title
+                p.intro__price!=content.main.price
+                .intro__tv-row 
+                    .intro__tv-img
                         img(src!=content.main.tv.img, alt="")
-                    p.intro-section__tv-text!=content.main.tv.text
+                    p.intro__tv-text!=content.main.tv.text
                 +button(content.main.button)
-            .intro-section__right-block
-                .intro-section__img-label 
+            .intro__right-block
+                .intro__img-label 
                     img(src!=content.main.labelImg, alt="")
 
 mixin backgroundImg(content, param)
     div&attributes(attributes)
-        .intro-section__swiper-img
+        .intro__swiper-img
             +picture(content.img)
-        .intro-section__name!= content.name
+        .intro__name!= content.name
 

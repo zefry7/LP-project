@@ -1,4 +1,4 @@
-.intro-section {
+.intro {
     height: 1080px;
     width: 100%;
     position: relative;
@@ -8,7 +8,7 @@
         height: 1080px;
     }
 
-    .intro-section__swiper-img {
+    .intro__swiper-img {
         height: 100%;
     }
     .swiper-pagination {
@@ -44,7 +44,7 @@
     }
     
 }
-.intro-section__bc {
+.intro__bc {
     position: absolute;
     z-index: 0;
     img {
@@ -54,6 +54,7 @@
     }
 }
 .header  {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -118,19 +119,19 @@
     }
 }
 
-.intro-section__main {
+.intro__main {
     margin-top: 190px;
     display: flex;
     padding-left: 160px;
 }
-.intro-section__left-block {
+.intro__left-block {
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 5;
     flex: 1 0 50%;
 }
-.intro-section__title {
+.intro__title {
     margin-bottom: 28px;
     height: 288px;
     width: 800px;
@@ -141,7 +142,7 @@
     font-weight: 700;
     line-height: 100%; 
 }
-.intro-section__price {
+.intro__price {
     margin-bottom: 87px;
     width: max-content;
     color: #350296;
@@ -177,18 +178,18 @@
         text-transform: uppercase;
     }
 }
-.intro-section__tv-row {
+.intro__tv-row {
     margin-bottom: 94px;
     height: max-content;
     display: flex;
     align-items: center;
 }
-.intro-section__tv-img {
+.intro__tv-img {
     margin-right: 28px;
     width: 67px;
     height: 67px;
 }
-.intro-section__tv-text {
+.intro__tv-text {
     width: 270px;
     color:  #212121;
     font-family: Montserrat;
@@ -197,7 +198,7 @@
     font-weight: 500;
     line-height: 22px; 
 }
-.intro-section__button {
+.intro__button {
     width: 465px;
     height: 94px;
     color: #FFF;
@@ -210,7 +211,7 @@
     border-radius: 15px;
     background: #E12D43;
 }
-.intro-section__decor {
+.intro__decor {
     position: absolute;
     top: 0;
     z-index: 0;
@@ -233,7 +234,7 @@
         filter: blur(197px);
     }
 }
-.intro-section__right-block {
+.intro__right-block {
     padding: 0 67px;
     flex: 1 0 50%;
     display: flex;
@@ -241,7 +242,7 @@
     justify-content: space-between;
     align-items: flex-end;
 }
-.intro-section__img-label {
+.intro__img-label {
     width: 210.321px;
     height: 210.321px;
     border-radius: 50%;
@@ -277,7 +278,7 @@
         background: url("../../../images/intro/display/label-text-2.png") center/ 100% no-repeat;
     }
 }
-.intro-section__name {
+.intro__name {
     opacity: 0;
     text-align: center;
     width: 830px;
@@ -296,7 +297,7 @@
     backdrop-filter: blur(1px);
 }
 .swiper-slide-active {
-    .intro-section__name {
+    .intro__name {
         animation: opac-text 0.3s linear 0.5s;
         animation-fill-mode: forwards;
     }

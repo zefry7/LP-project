@@ -39,6 +39,24 @@ const PRESETS = {
       type: "bullets",
       clickable: true,
     }
+  },
+  carouselWinners: {
+    slidesPerView: 3.5,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: ".winners__pagination",
+      type: "bullets",
+      clickable: true,
+    }
+  },
+  carouselTravel: {
+    pagination: {
+      el: ".travel__pagination",
+      type: "bullets",
+    }
   }
 };
 

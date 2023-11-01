@@ -1,10 +1,11 @@
 mixin join(content, params)
   section#join.join
-    h2.join__title!= content.title
-    .join__pagination 
-    .join__info 
-      +carousel(content.items, "infoJoin")(data-carousel="carouselJoin")
-    +button(content.button)
+    .join__content
+      h2.join__title!= content.title
+      .join__pagination 
+      .join__info 
+        +carousel(content.items, "infoJoin")(data-carousel="carouselJoin")
+      +button(content.button)
 
 mixin infoJoin(content, params)
   div&attributes(attributes)

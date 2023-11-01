@@ -1,0 +1,26 @@
+mixin footer(content, params)
+  section.footer 
+    .footer__content 
+      .footer__left 
+        .footer__logo-img 
+          img(src!=content.logo, alt="")
+        .footer__block-text
+          each v in content.text  
+            p.footer__text!= v
+        .footer__line
+        +social-block(content)
+      .footer__right
+        .footer__gr-row 
+          each v in content.right.gr
+            .footer__gr-img
+              img(src!=v.img, alt="")
+        p.footer__text-org!= content.right.textOrg
+        .footer__name-row 
+          each v in content.right.name
+            .footer__name-img
+              img(src!=v.img, alt="")
+        p.footer__text-center!= content.right.textCenter
+        each v in content.right.text  
+          p.footer__text!= v
+
+

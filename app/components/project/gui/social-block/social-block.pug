@@ -1,6 +1,6 @@
 mixin social-block(content, params)
   .social-block&attributes(attributes)
-    .social-block__title!=content.title
+    //- .social-block__title!=content.title
     .social-block__buttons
       +pug-list(content.list, "social-block__item", params)
 

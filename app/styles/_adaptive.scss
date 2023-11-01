@@ -10,6 +10,7 @@ $PORTRAIT: "screen and (orientation: portrait)";
 
 $MOBILE_MEDIA: "screen and (max-width: #{$TABLET - 1})";
 $TABLET_MEDIA: "screen and (min-width: #{$TABLET}) and (max-width: #{$DESKTOP - 1})";
+$TABLET-L_MEDIA: "screen and (min-width: #{$TABLET-L}) and (max-width: #{$DESKTOP - 1}) and (orientation: landscape)";
 $DESKTOP_MEDIA: "screen and (min-width: #{$DESKTOP})";
 
 @mixin MOBILE() {
@@ -26,6 +27,13 @@ $DESKTOP_MEDIA: "screen and (min-width: #{$DESKTOP})";
   @media #{$TABLET_MEDIA} { @content; }
 }
 @mixin NOT-TABLET() {
+  @media #{$MOBILE_MEDIA}, #{$DESKTOP_MEDIA} { @content; }
+}
+
+@mixin TABLET-L() {
+  @media #{$TABLET-L_MEDIA} { @content; }
+}
+@mixin NOT-TABLET-L() {
   @media #{$MOBILE_MEDIA}, #{$DESKTOP_MEDIA} { @content; }
 }
 

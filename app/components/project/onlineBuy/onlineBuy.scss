@@ -1,4 +1,14 @@
-.onlineBuy-section {
+.onlineBuy {
+    padding: 0 100px;
+    background: #0F3017;
+
+    .button {
+        align-self: center;
+        position: relative;
+        z-index: 5;
+    }
+}
+.onlineBuy__content {
     padding: 165px 62px;
     display: flex;
     flex-direction: column;
@@ -10,7 +20,7 @@
         content: "";
         display: inline-block;
         width: 2089px;
-        height: 1269px; 
+        height: 100%; 
         position: absolute;
         z-index: 1;
         bottom: 0;
@@ -18,11 +28,11 @@
         background: url("../../../images/onlineBuy/display/light.png") center/ 100% no-repeat;
     }
 }
-.onlineBuy-section__row  {
+.onlineBuy__row  {
     margin-bottom: 100px;
     display: flex;
 }
-.onlineBuy-section__title {
+.onlineBuy__title {
     margin-right: auto;
     width: 1000px;
     color: #212121;
@@ -32,11 +42,11 @@
     font-weight: 700;
     line-height: 115.5%;    
 }
-.onlineBuy-section__video {
+.onlineBuy__video {
     align-self: flex-end;
     display: flex;
 }
-.onlineBuy-section__video-text {
+.onlineBuy__video-text {
     margin-right: 42px;
     width: 153px;
     color: #212121;
@@ -46,21 +56,21 @@
     font-weight: 600;
     line-height: 150%;
 }
-.onlineBuy-section__list {
+.onlineBuy__list {
     margin-bottom: 100px;
     position: relative;
     z-index: 5;
     display: flex;
     gap: 51px;
 }
-.onlineBuy-section__column {
+.onlineBuy__column {
     padding: 30px;
     width: 361px;
     height: 555px;
     border-radius: 15px;
     background: #FFF;
 }
-.onlineBuy-section__img {
+.onlineBuy__img {
     margin-bottom: 55px;
     height: 130px;
     width: 130px;
@@ -69,7 +79,7 @@
         height: 100%;
     }
 }
-.onlineBuy-section__name {
+.onlineBuy__name {
     margin-bottom: 10px;
     width: 270px;
     color: #212121;
@@ -79,7 +89,7 @@
     font-weight: 700;
     line-height: 28px; 
 }
-.onlineBuy-section__text {
+.onlineBuy__text {
     color: #7D7272;
     font-family: Montserrat;
     font-size: 18px;
@@ -87,10 +97,8 @@
     font-weight: 400;
     line-height: 26px; 
 }
-.onlineBuy-section__button {
-    align-self: center;
-    position: relative;
-    z-index: 5;
+.onlineBuy__button {
+
     width: 465px;
     height: 94px;
     color: #FFF;

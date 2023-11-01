@@ -1,0 +1,233 @@
+.travel {
+  padding: 0 100px;
+  background: #0F3017;
+
+  .button {
+      align-self: center;
+      position: relative;
+      z-index: 5;
+  }
+  .travel__pagination {
+    margin-bottom: 90px;
+    align-self: center;
+    display: flex;
+    gap: 30px;
+    width: max-content;
+  }
+  .swiper-pagination-bullet {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      border-radius: 10px;
+      opacity: 0.7;
+      background: #F7F7F7;
+  }
+  .swiper-pagination-bullet-active {
+      opacity: 1;
+      animation: anim-width-pb 5.5s linear;
+      animation-fill-mode: forwards;
+  }
+
+  @keyframes anim-width-pb {
+      0%{
+          width: 10px;
+      }
+      100%{
+          width: 160px;
+      }
+  }
+
+  .carousel__item {
+    width: 550px;
+  }
+  .swiper-wrapper {
+    height: 850px;
+    width: 4400px;
+    background: url("../../../images/travel/display/road.png") left center/ 4000px 800px no-repeat;
+
+    .carousel__item:nth-child(1) {
+      position: relative;
+      left: 80px;
+      top: 50%;
+      transform: rotate(0.946deg);
+      .travel__item {
+        &::after {
+          right: 70px;
+          transform: scale(2);
+        }
+      }
+    }
+    .carousel__item:nth-child(2) {
+      position: relative;
+      left: 200px;
+      top: 10%;
+      transform: rotate(-10.083deg);
+      .travel__item {
+        &::after {
+          right: 40px;
+          top: -30px;
+          transform: scale(2) rotate(-80deg);
+        }
+      }
+    }
+    .carousel__item:nth-child(3) {
+      position: relative;
+      left: 150px;
+      top: 60%;
+      transform: rotate(3.725deg);
+      .travel__item {
+        &::after {
+          top: -30px;
+          right: 30px;
+          transform: scale(2) rotate(-90deg);
+        }
+      }
+    }
+    .carousel__item:nth-child(4) {
+      position: relative;
+      left: 100px;
+      top: 5%;
+      transform: rotate(-3.726deg);
+      .travel__item {
+        &::after {
+          top: 0px;
+          right: 0px;
+          transform: scale(2) rotate(5deg);
+        }
+      }
+    }
+    .carousel__item:nth-child(5) {
+      position: relative;
+      left: 0px;
+      top: 45%;
+      transform: rotate(4.452deg);
+      .travel__item {
+        &::after {
+          top: -30px;
+          right: 30px;
+          transform: scale(2) rotate(-82deg);
+        }
+      }
+    }
+    .carousel__item:nth-child(6) {
+      position: relative;
+      left: 0px;
+      top: 8%;
+      transform: rotate(-0.343deg);
+      .travel__item {
+        &::after {
+          top: -30px;
+          right: 30px;
+          transform: scale(2) rotate(-54deg);
+        }
+      }
+    }
+    .carousel__item:nth-child(7) {
+      position: relative;
+      left: -150px;
+      top: 50%;
+      transform: rotate(-3.726deg);
+      .travel__item {
+        &::after {
+          top: -50px;
+          right: 40px;
+          transform: scale(2) rotate(-90deg);
+        }
+      }
+    }
+    .carousel__item:nth-child(8) {
+      position: relative;
+      left: -150px;
+      top: 25%;
+      transform: rotate(7.718deg);
+      .travel__item {
+        &::after {
+          top: -30px;
+          right: 30px;
+          transform: scale(2) rotate(-57deg);
+        }
+      }
+    }
+  }
+  .swiper-container {
+    margin-left: -67px;
+    margin-right: -67px;
+  }
+}
+.travel__content {
+  padding: 80px 67px 125px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background: #FEC74E;
+  position: relative;
+  overflow: hidden;
+  &::before {
+      content: "";
+      display: inline-block;
+      width: 2089px;
+      height: 100%; 
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: url("../../../images/onlineBuy/display/light.png") center/ 100% no-repeat;
+  }
+}
+.travel__title {
+  margin-bottom: 28px;
+  position: relative;
+  color: var(--grey-day-900, #212121);
+  font-family: Montserrat;
+  font-size: 74px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115.5%; 
+}
+.travel__text {
+  width: 800px;
+  position: relative;
+  color: var(--grey-day-900, #212121);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; 
+}
+.travel__list {
+
+}
+.travel__item {
+  padding: 30px;
+  width: 500px;
+  height: 290px;
+  border-radius: 15px;
+  background: #FFF;
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 49px;
+    height: 81px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(../../../images/travel/display/pin.svg) left top/ 49px 71px no-repeat;
+  }
+}
+.travel__item-title {
+  margin-bottom: 18px;
+  color: var(--grey-day-900, #212121);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; 
+}
+.travel__item-text {
+  color: var(--grey-day-900, #212121);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; 
+}

@@ -1,18 +1,9 @@
 .join {
-  padding: 160px 60px 145px;
-  display: flex;
-  flex-direction: column;
+  padding: 160px 160px 145px;
+  background: #0F3017;
   .swiper-slide {
     display: flex;
     justify-content: space-between;
-  }
-  .swiper-wrapper {
-    // & .carousel__item:last-child {
-    //     .join__img {
-    //       position: relative;
-    //       top: -106px;
-    //     }
-    // }
   }
 
   .button {
@@ -43,6 +34,10 @@
     border: none;
   }
 
+}
+.join__content {
+  display: flex;
+  flex-direction: column;
 }
 .join__title {
   margin-bottom: 120px;

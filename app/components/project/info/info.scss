@@ -1,4 +1,13 @@
-.info-section {
+.info {
+  overflow: hidden;
+  padding: 0 100px;
+  background: #0F3017;
+
+  .button {
+    align-self: center;
+  }
+}
+.info__content {
   padding: 165px 0;
   position: relative;
   display: flex;
@@ -15,7 +24,7 @@
     background: url(../../../images/download/display/decor.svg) center/ 100% no-repeat;
   }
 }
-.info-section__title{
+.info__title{
   margin-bottom: 112px;
   width: 1000px;
   color: #FFF;
@@ -25,7 +34,7 @@
   font-weight: 700;
   line-height: 120%;
 }
-.info-section__price {
+.info__price {
   margin-bottom: 183px;
   color: #FEC74E;
   font-family: Montserrat;
@@ -61,10 +70,7 @@
     text-transform: uppercase;
   }
 }
-.info-section__button {
-  align-self: center;
-}
-.info-section__decor {
+.info__decor {
   width: 940px;
   height: 1003px;
   position: absolute;

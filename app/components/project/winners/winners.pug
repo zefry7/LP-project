@@ -1,0 +1,22 @@
+mixin winners(content, params)
+  section#winners.winners
+    .winners__content 
+      .winners__row-title 
+        p.winners__title!=content.title
+        .winners__history
+          p.winners__history-text!= content.buttonHistory.text
+          .winners__history-img 
+            img(src!=content.buttonHistory.img, alt="")
+      .winners__list
+        +carousel(content.list, "winnersList")(data-carousel="carouselWinners")
+      .winners__pagination
+      +button(content.button)
+      
+mixin winnersList(content, params)
+  .winners__item&attributes(attributes)
+    .winners__item-img 
+      img(src!=content.img, alt="")
+    .winners__item-text 
+      p.winners__item-present!= content.present
+      p.winners__item-name!= content.name
+

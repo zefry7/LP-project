@@ -9,7 +9,7 @@ export function anchorSmoothScroll() {
     event.preventDefault();
     console.log(this);
     $('html, body').animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 90
+      scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
   });
 }
