@@ -5,6 +5,10 @@
     display: flex;
     justify-content: space-between;
   }
+  .swiper-container {
+    overflow: visible;
+    overflow-x: hidden;
+  }
 
   .button {
     align-self: center;

@@ -1,6 +1,19 @@
 .travel {
   padding: 0 100px;
   background: #0F3017;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    right: -260px;
+    bottom: -312px;
+    display: inline-block;
+    width: 1216.422px;
+    height: 858.945px;
+    opacity: 0.05;
+    transform: rotateX(180deg);
+    background: url(../../../images/download/display/decor.svg) center/ 100% no-repeat;
+  }
 
   .button {
       align-self: center;

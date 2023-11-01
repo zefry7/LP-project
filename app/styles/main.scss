@@ -8,7 +8,9 @@
 @import "./style-null.scss";
 @import "../components/project/project";
 
-
+.custom-page {
+    overflow: hidden;
+}
 .button {
     width: 465px;
     height: 94px;
