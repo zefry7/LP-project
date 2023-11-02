@@ -109,10 +109,10 @@
     #{$n}: vw($v)
   }
   @include TABLET {
-    #{$n}: vwt($v)
+    #{$n}: vwt($vm)
   }
   @include MOBILE {
-    #{$n}: vwm($v)
+    #{$n}: vwm($vm)
   }
 }
 

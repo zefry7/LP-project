@@ -29,16 +29,6 @@
       animation: anim-width-pb 5.5s linear;
       animation-fill-mode: forwards;
   }
-
-  @keyframes anim-width-pb {
-      0%{
-          width: 10px;
-      }
-      100%{
-          width: 160px;
-      }
-  }
-
   .button {
     align-self: center;
   }

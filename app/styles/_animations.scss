@@ -37,6 +37,30 @@
     transform: translate(0);
   }
 }
+@keyframes anim-width-pb {
+  0%{
+      width: 10px;
+  }
+  100%{
+      width: 160px;
+  }
+}
+@keyframes hover-line {
+  0%{
+      width: 0%;
+  }
+  100% {
+      width: 100%;
+  }
+}
+@keyframes opac-text {
+  0%{
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 
 //%SHAKE {
 //  @include shake-animation(SCALE-SHAKE, .025, 1, 1.0s);

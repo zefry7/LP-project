@@ -19,8 +19,9 @@ mixin footer(content, params)
           each v in content.right.name
             .footer__name-img
               +picture(v)
-        p.footer__text-center!= content.right.textCenter
-        each v in content.right.text  
-          p.footer__text!= v
+        .footer__text-block
+          p.footer__text-center!= content.right.textCenter
+          each v in content.right.text  
+            p.footer__text!= v
 
 

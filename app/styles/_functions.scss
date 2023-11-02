@@ -170,12 +170,12 @@
   @return adaptive( $v, $DESIGN-W, 1vw);
 }
 
-@function vwm($v){
-  @return adaptive( $v, $DESIGN-W-M, 1vw);
-}
-
 @function vwt($v){
   @return adaptive( $v, $DESIGN-W-M, 1vw*.75);
+}
+
+@function vwm($v){
+  @return adaptive( $v, $DESIGN-W-M, 1vw);
 }
 
 @function vhm($v){
