@@ -1,9 +1,9 @@
 mixin info(content)
   section.info
     .info__content
-      h2.info__title= content.title
-      p.info__price= content.price
+      h2.info__title!= content.title
+      p.info__price!= content.price
       +button(content.button)
       .info__decor 
-        img(src=content.decor, alt="")
+        +picture(content.decor)
     

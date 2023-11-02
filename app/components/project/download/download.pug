@@ -4,10 +4,10 @@ mixin download(content)
       h2.download__title!= content.title
       ul.download__list 
         each v in content.items
-          li.download__item-text!= v.text
+          li.download__item-text!= v
       .download__decor 
-        img(src!=content.decor, alt="")
+        +picture(content.decor)
     .download__buttons-row 
       each v in content.buttons
         .download__button 
-          img(src!=v, alt="")
+          img(src!=v.img, alt!=v.alt)

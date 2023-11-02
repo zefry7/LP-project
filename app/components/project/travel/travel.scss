@@ -9,7 +9,7 @@
     bottom: -312px;
     display: inline-block;
     width: 1216.422px;
-    height: 858.945px;
+    height: 650.945px;
     opacity: 0.05;
     transform: rotateX(180deg);
     background: url(../../../images/download/display/decor.svg) center/ 100% no-repeat;
@@ -54,9 +54,9 @@
     width: 550px;
   }
   .swiper-wrapper {
-    height: 850px;
+    height: 750px;
     width: 4400px;
-    background: url("../../../images/travel/display/road.png") left center/ 4000px 800px no-repeat;
+    background: url("../../../images/travel/display/road.png") left center/ 4000px 650px no-repeat;
 
     .carousel__item:nth-child(1) {
       position: relative;
@@ -86,7 +86,7 @@
     .carousel__item:nth-child(3) {
       position: relative;
       left: 150px;
-      top: 60%;
+      top: 50%;
       transform: rotate(3.725deg);
       .travel__item {
         &::after {

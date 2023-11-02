@@ -10,7 +10,7 @@ mixin intro(content)
                 p.intro__price!=content.main.price
                 .intro__tv-row 
                     .intro__tv-img
-                        img(src!=content.main.tv.img, alt="")
+                        +picture(content.main.tv.imgTV)
                     p.intro__tv-text!=content.main.tv.text
                 +button(content.main.button)
             .intro__right-block

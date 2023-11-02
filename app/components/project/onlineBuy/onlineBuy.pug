@@ -6,12 +6,12 @@ mixin onlineBuy(content)
         .onlineBuy__video
           p.onlineBuy__video-text!= content.videoText
           .onlineBuy__button-img 
-            img(src!=content.videoImg, alt="")
+            img(src!=content.videoImg.img, alt!=content.videoImg.alt)
       .onlineBuy__list 
         each v in content.imgItems
           .onlineBuy__column 
             .onlineBuy__img 
-              img(src!=v.img, alt="")
+              img(src!=v.img.img, alt!=v.img.alt)
             p.onlineBuy__name!= v.name
             p.onlineBuy__text!= v.text
       +button(content.button)

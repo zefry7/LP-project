@@ -68,13 +68,26 @@
       "title": "Открывайте Россию с «Русским лото»!",
       "price": "от 800 000 000 ₽",
       "tv": {
-        "img": "../images/intro/display/logo-tv.png",
+        "imgTV": {
+          "img": "../images/intro/display/logo-tv.png",
+          "alt": "Логотип канала НТВ",
+          "source": [
+            {
+              "srcSet": "../images/intro/display/logo-tv.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/intro/mobile/logo-tv.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "text": "Смотрите трансляцию тиража в 8:20 на НТВ"
       },
       "button": {
         "text": "Купить билеты"
       },
-      "labelImg": "../images/intro/display/label-img.png",
+      "labelImg": "../images/intro/display/label-img.svg",
       "bc": [
         {
           "img": {
@@ -170,44 +183,71 @@
     "subtitle": "РАЗЫГРАЕМ ДЖЕКПОТ 1 000 000 ₽",
     "items": [
       {
-        "img": "../images/ticket/display/decor-1.png",
         "text": "Покупай и регистрируй лотерейные билеты и пакеты лотерей"
       },
       {
-        "img": "../images/ticket/display/decor-2.png",
         "text": "Копи лотокоины и участвуй в розыгрыше денежных призов"
       },
       {
-        "img": "../images/ticket/display/decor-3.png",
         "text": "Крути барабан удачи и выигрывай гарантированные призы"
       }
     ],
-    "button": "Купить билеты",
+    "button": {
+      "text": "Купить билеты"
+    },
     "private": "Ознакомиться с правилами",
-    "decorImg": "../images/ticket/display/avto.png"
+    "decorImg": {
+      "img": "../images/ticket/display/avto.png",
+      "alt": "Элемент оформления",
+      "source": [
+        {
+          "srcSet": "../images/ticket/display/avto.png",
+          "media": "(min-width: 768px)"
+        },
+        {
+          "srcSet": "../images/ticket/mobile/avto.png",
+          "media": "(max-width: 768px)"
+        }
+      ]
+    }
   },
   "onlineBuy": {
     "title": "Покупать билеты онлайн – безопасно",
     "videoText": "Смотреть видео",
-    "videoImg": "../images/onlineBuy/display/button.svg",
+    "videoImg": {
+      "img": "../images/onlineBuy/display/button.svg",
+      "alt": "Кнопка для перехода на просмотр видео"
+    },
     "imgItems": [
       {
-        "img": "../images/onlineBuy/display/item-4.svg",
+        "img": {
+          "img": "../images/onlineBuy/display/item-1.svg",
+          "alt":  "Элемент оформления"
+        },
         "name": "Безопасная регистрация",
         "text": "При регистрации вы указываете только свой электронный адрес и номер телефона. На этот номер мы будем отправлять вам смс с паролем для получения выигрышей на сайте. "
       },
       {
-        "img": "../images/onlineBuy/display/item-1.png",
+        "img": {
+          "img": "../images/onlineBuy/display/item-2.svg",
+          "alt":  "Элемент оформления"
+        },
         "name": "Безопасность данных",
         "text": "Мы не сохраняем номера банковских карт, платёжные пароли и другие данные, которые вы вводите при оплате билетов. Вся информация хранится только на стороне платёжной системы, которую вы выбираете сами. "
       },
       {
-        "img": "../images/onlineBuy/display/item-2.png",
+        "img": {
+          "img": "../images/onlineBuy/display/item-3.svg",
+          "alt":  "Элемент оформления"
+        },
         "name": "Государственные лотереи",
         "text": "Организаторами всех лотерей в России являются Министерство спорта и Министерство финансов. Они следят за тем, чтобы все розыгрыши проводились честно, а победители вовремя получали выигрыши."
       },
       {
-        "img": "../images/onlineBuy/display/item-3.png",
+        "img": {
+          "img": "../images/onlineBuy/display/item-4.svg",
+          "alt":  "Элемент оформления"
+        },
         "name": "Ваш билет никогда не потеряется",
         "text": "Вся информация о купленных билетах хранится в вашем личном кабинете. Если возникнут проблемы, вы сможете обратиться в нашу службу поддержки. Мы всегда вам поможем."
       }
@@ -219,31 +259,47 @@
   "download": {
     "title": "Скачайте мобильное приложение «Столото»",
     "items": [
-      {
-        "img": "../images/download/display/line-1.svg",
-        "text": "Удобная и безопасная оплата"
-      },
-      {
-        "img": "../images/download/display/line-2.svg",
-        "text": "Быстрый вывод денег на карту"
-      },
-      {
-        "img": "../images/download/display/line-3.svg",
-        "text": "Лотереи всегда под рукой"
-      },
-      {
-        "img": "../images/download/display/line-4.svg",
-        "text": "Push-уведомления о выигрышах"
-      }
+        "Удобная и безопасная оплата",
+        "Быстрый вывод денег на карту",
+        "Лотереи всегда под рукой",
+        "Push-уведомления о выигрышах"
     ],
     "buttons": [
-      "../images/download/display/button-1.svg",
-      "../images/download/display/button-2.svg",
-      "../images/download/display/button-3.svg",
-      "../images/download/display/button-4.svg",
-      "../images/download/display/button-5.svg"
+      {
+        "img": "../images/download/display/button-1.svg",
+        "alt": "Кнопка для скачивания для Iphone"
+      },
+      {
+        "img": "../images/download/display/button-2.svg",
+        "alt": "Кнопка для скачивания для Android"
+      },
+      {
+        "img": "../images/download/display/button-3.svg",
+        "alt": "Кнопка для скачивания для Samsung"
+      },
+      {
+        "img": "../images/download/display/button-4.svg",
+        "alt": "Кнопка для скачивания для Huawei"
+      },
+      {
+        "img": "../images/download/display/button-5.svg",
+        "alt": "Кнопка для скачивания для Xiaomi"
+      }
     ],
-    "decor": "../images/download/display/tel-img.png"
+    "decor": {
+      "img": "../images/download/display/tel-img.png",
+      "alt": "Элемент оформления",
+      "source": [
+        {
+          "srcSet": "../images/download/display/tel-img.png",
+          "media": "(min-width: 768px)"
+        },
+        {
+          "srcSet": "../images/download/mobile/tel-img.png",
+          "media": "(max-width: 768px)"
+        }
+      ]
+    }
   },
   "join": {
     "title": "Как участвовать?",
@@ -252,7 +308,10 @@
         "label": "1 из 4",
         "name": "Выберите билет",
         "text": "Комбинации в билетах проставлены заранее. Вам просто нужно выбрать один или несколько билетов со своими любимыми или случайными числами. Помните:  больше билетов — больше шансов на успех!",
-        "img": "../images/join/display/ticket.svg"
+        "img": {
+          "img": "../images/join/display/ticket.svg",
+          "alt":"Элемент оформления"
+        }
       },
       {
         "label": "2 из 4",
@@ -266,19 +325,28 @@
           "Система быстрых платежей;",
           "SberPay; Альфа-Клик."
         ],
-        "img": "../images/join/display/card.svg"
+        "img": {
+          "img": "../images/join/display/card.svg",
+          "alt":"Элемент оформления"
+        }
       },
       {
         "label": "3 из 4",
         "name": "Следите за розыгрышем",
         "text": "Смотрите трансляцию розыгрыша или проверьте билет на сайте stoloto.ru.",
-        "img": "../images/join/display/tv.svg"
+        "img": {
+          "img": "../images/join/display/tv.svg",
+          "alt":"Элемент оформления"
+        }
       },
       {
         "label": "4 из 4",
         "name": "Получите свой выигрыш",
         "text": "Выигрыши до 600 000 рублей можно получить онлайн. Если вы выиграли крупный приз, то оформить его можно в лотерейном центре «Столото».",
-        "img": "../images/join/display/prisent.svg"
+        "img": {
+          "img": "../images/join/display/prisent.svg",
+          "alt":"Элемент оформления"
+        }
       }
     ],
     "button": {
@@ -291,10 +359,26 @@
     "button": {
       "text": "Купить билеты"
     },
-    "decor": "../images/info/display/bag.png"
+    "decor": {
+      "img": "../images/info/display/bag.png",
+      "alt": "Элемент оформления",
+      "source": [
+        {
+          "srcSet": "../images/info/display/bag.png",
+          "media": "(min-width: 768px)"
+        },
+        {
+          "srcSet": "../images/info/mobile/bag.png",
+          "media": "(max-width: 768px)"
+        }
+      ]
+    }
   },
   "footer": {
-    "logo": "../images/footer/display/logo.svg",
+    "logo": {
+      "img": "../images/footer/display/logo.svg",
+      "alt": "Логотип"
+    },
     "text": [
       "Заявленный размер суперприза является минимально гарантированной суммой, распределяемой среди победителей в соответствующей категории выигрышей.",
       "«ВГЛ 4 Спорт» (алгоритм определения выигрышей № 3), коммерческое наименование — «Русское лото», срок проведения — до 31.12.2029. Информацию об организаторе лотереи, о правилах ее проведения, о призовом фонде лотереи, количестве призов или выигрышей, о сроках, месте и порядке получения призов или выигрышей можно узнать на сайте stoloto.ru или по тел. 8 900 555-00-55. Розыгрыши проводятся еженедельно. Выигрыши носят вероятностный характер. Лотерея не является способом заработка и источником дохода. ",
@@ -321,18 +405,62 @@
     "right": {
       "gr": [
         {
-          "img": "../images/footer/display/gr-1.png"
+          "img": "../images/footer/display/gr-1.png",
+          "alt": "Герб",
+          "source": [
+            {
+              "srcSet": "../images/footer/display/gr-1.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/footer/mobile/gr-1.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
         },
         {
-          "img": "../images/footer/display/gr-2.png"
+          "img": "../images/footer/display/gr-2.png",
+          "alt": "Герб",
+          "source": [
+            {
+              "srcSet": "../images/footer/display/gr-2.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/footer/mobile/gr-2.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
         }
       ],
       "name": [
         {
-          "img": "../images/footer/display/name-1.png"
+          "img": "../images/footer/display/name-1.png",
+          "alt": "Организация",
+          "source": [
+            {
+              "srcSet": "../images/footer/display/name-1.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/footer/mobile/name-1.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
         },
         {
-          "img": "../images/footer/display/name-2.svg"
+          "img": "../images/footer/display/name-2.png",
+          "alt": "Организация",
+          "source": [
+            {
+              "srcSet": "../images/footer/display/name-2.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/footer/mobile/name-2.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
         }
       ],
       "textOrg": "Организаторами лотерей являются Министерство спорта РФ и Министерство финансов РФ.",
@@ -354,127 +482,452 @@
     },
     "list": [
       {
-        "img": "../images/winners/display/winner-1.png",
+        "img": {
+          "img": "../images/winners/display/winner-1.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-1.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-1.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "600 000 ₽",
         "name": "Эльвира Тухбатуллина"
       },
       {
-        "img": "../images/winners/display/winner-2.png",
+        "img": {
+          "img": "../images/winners/display/winner-2.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-2.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-2.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Татьяна Серебреникова"
       },        
       {
-        "img": "../images/winners/display/winner-3.png",
+        "img": {
+          "img": "../images/winners/display/winner-3.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-3.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-3.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "706 577 ₽",
         "name": "Людмила Новик"
       },
       {
-        "img": "../images/winners/display/winner-4.png",
+        "img": {
+          "img": "../images/winners/display/winner-4.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-4.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-4.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Александр Вечканов"
       },
       {
-        "img": "../images/winners/display/winner-5.png",
+        "img": {
+          "img": "../images/winners/display/winner-5.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-5.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-5.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "Загородный дом",
         "name": "Алия Гафиятуллина"
       },
       {
-        "img": "../images/winners/display/winner-6.png",
+        "img": {
+          "img": "../images/winners/display/winner-6.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-6.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-6.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Иван и Юлия Труфановы"
       },
       {
-        "img": "../images/winners/display/winner-7.png",
+        "img": {
+          "img": "../images/winners/display/winner-7.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-7.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-7.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "Автомобиль",
         "name": "Виктор Шаравин"
       },
       {
-        "img": "../images/winners/display/winner-8.png",
+        "img": {
+          "img": "../images/winners/display/winner-8.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-8.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-8.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "750 000 ₽",
         "name": "Дмитрий Рыбин"
       },        
       {
-        "img": "../images/winners/display/winner-9.png",
+        "img": {
+          "img": "../images/winners/display/winner-9.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-9.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-9.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Анна Арженовская"
       },        
       {
-        "img": "../images/winners/display/winner-10.png",
+        "img": {
+          "img": "../images/winners/display/winner-10.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-10.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-10.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "600 000 ₽",
         "name": "Оксана Бородаева"
       },        
       {
-        "img": "../images/winners/display/winner-11.png",
+        "img": {
+          "img": "../images/winners/display/winner-11.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-11.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-11.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽ ₽",
         "name": "Роман Варганов"
       },        
       {
-        "img": "../images/winners/display/winner-12.png",
+        "img": {
+          "img": "../images/winners/display/winner-12.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-12.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-12.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Николай Вологжанин"
       },        
       {
-        "img": "../images/winners/display/winner-13.png",
+        "img": {
+          "img": "../images/winners/display/winner-13.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-13.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-13.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Семья Волошенко"
       },        
       {
-        "img": "../images/winners/display/winner-14.png",
+        "img": {
+          "img": "../images/winners/display/winner-14.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-14.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-14.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Надежда Домбовская"
       },        
       {
-        "img": "../images/winners/display/winner-15.png",
+        "img": {
+          "img": "../images/winners/display/winner-15.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-15.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-15.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "812 500 ₽",
         "name": "Татьяна Зеликова"
       },        
       {
-        "img": "../images/winners/display/winner-16.png",
+        "img": {
+          "img": "../images/winners/display/winner-16.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-16.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-16.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Рахима Игнатова"
       },        
       {
-        "img": "../images/winners/display/winner-17.png",
+        "img": {
+          "img": "../images/winners/display/winner-17.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-17.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-17.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Владислав Иотенко"
       },
       {
-        "img": "../images/winners/display/winner-18.png",
+        "img": {
+          "img": "../images/winners/display/winner-18.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-18.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-18.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Ангелина Леонова"
       },
       {
-        "img": "../images/winners/display/winner-19.png",
+        "img": {
+          "img": "../images/winners/display/winner-19.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-19.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-19.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Мария Лукашук"
       },        
       {
-        "img": "../images/winners/display/winner-20.png",
+        "img": {
+          "img": "../images/winners/display/winner-20.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-20.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-20.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Анна Макарова"
       },        
       {
-        "img": "../images/winners/display/winner-21.png",
+        "img": {
+          "img": "../images/winners/display/winner-21.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-21.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-21.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "600 000 ₽",
         "name": "Анастасия Малюта"
       },        
       {
-        "img": "../images/winners/display/winner-22.png",
+        "img": {
+          "img": "../images/winners/display/winner-22.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-22.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-22.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "600 000 ₽",
         "name": "Андрей Павлик"
       },        
       {
-        "img": "../images/winners/display/winner-23.png",
+        "img": {
+          "img": "../images/winners/display/winner-23.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-23.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-23.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "600 000 ₽",
         "name": "Ольга Сусакина"
       },
       {
-        "img": "../images/winners/display/winner-24.png",
+        "img": {
+          "img": "../images/winners/display/winner-24.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-24.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-24.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Семья Трегубовых"
       },
       {
-        "img": "../images/winners/display/winner-25.png",
+        "img": {
+          "img": "../images/winners/display/winner-25.png",
+          "alt": "Фотография победителя",
+          "source": [
+            {
+              "srcSet": "../images/winners/display/winner-25.png",
+              "media": "(min-width: 768px)"
+            },
+            {
+              "srcSet": "../images/winners/mobile/winner-25.png",
+              "media": "(max-width: 768px)"
+            }
+          ]
+        },
         "present": "1 000 000 ₽",
         "name": "Андрей Шаманаев"
       }

@@ -5,6 +5,17 @@
     display: flex;
     @include option(gap, 26);
   }
+  .social-block__item_social-4 {
+    position: relative;
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 36px;
+      width: 36px;
+      position: absolute;
+      background: url("../../../images/footer/display/letter-r.png") center/ 13px 17px no-repeat;
+    }
+  }
 }
 .footer__content {
   @include option(padding-top, 42);

@@ -15,7 +15,7 @@ mixin winners(content, params)
 mixin winnersList(content, params)
   .winners__item&attributes(attributes)
     .winners__item-img 
-      img(src!=content.img, alt="")
+      +picture(content.img)
     .winners__item-text 
       p.winners__item-present!= content.present
       p.winners__item-name!= content.name

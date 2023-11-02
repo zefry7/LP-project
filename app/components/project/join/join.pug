@@ -18,4 +18,4 @@ mixin infoJoin(content, params)
             each v in content.lines 
               li.join__text!=v
     .join__img 
-      img(src!=content.img, alt="")
+      img(src!=content.img.img, alt!=content.img.alt)
