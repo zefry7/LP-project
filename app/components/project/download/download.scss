@@ -1,101 +1,95 @@
 .download {
-  padding: 0 100px;
   background: #0F3017;
 }
 .download__content {
-  padding: 165px 62px 0;
+  @include option(padding-top, 165, 55);
+  @include option(padding-left, 162, 20);
+  @include option(padding-right, 162, 20);
+  @include option(padding-bottom, 80, 0);
   position: relative;
 }
 .download__title {
-  margin-bottom: 134px;
-  width: 943px;
+  @include option(margin-bottom, 134, 40);
+  @include option(width, 943, 240);
   color: #FFF;
   font-family: Montserrat;
-  font-size: 74px;
+  @include option(font-size, 74, 26);
   font-style: normal;
   font-weight: 700;
   line-height: 115.5%; 
 }
 .download__list {
-  margin-bottom: 165px;
+  @include option(margin-bottom, 165, 33);
   & .download__item-text:nth-child(1) {
     &::before {
-      content: "";
-      margin-right: 70px;
-      display: inline-block;
-      width: 57.216px;
-      height: 55px;
-      background: url("../../../images/download/display/line-1.svg") center/ 46px 55px no-repeat;
+      background: url("../../../images/download/display/line-1.svg") center/ 80% no-repeat;
     }
   }
   & .download__item-text:nth-child(2) {
     &::before {
-      content: "";
-      margin-right: 70px;
-      display: inline-block;
-      width: 57.216px;
-      height: 50.633px;
       background: url("../../../images/download/display/line-2.svg") center/ 100% no-repeat;
     }
   }
   & .download__item-text:nth-child(3) {
     &::before {
-      content: "";
-      margin-right: 70px;
-      display: inline-block;
-      width: 57.216px;
-      height: 50.633px;
       background: url("../../../images/download/display/line-3.svg") center/ 100% no-repeat;
     }
   }
   & .download__item-text:nth-child(4) {
     &::before {
-      content: "";
-      margin-right: 70px;
-      display: inline-block;
-      width: 57.216px;
-      height: 50.633px;
-      background: url("../../../images/download/display/line-4.svg") center/ 70px 70px no-repeat;
+      background: url("../../../images/download/display/line-4.svg") center/ 110% no-repeat;
     }
   }
 }
 .download__item-text {
-  margin-bottom: 56px;
+  @include option(margin-bottom, 56, 33);
   display: flex;
   align-items: center;
   color:  #FFF;
   font-family: Montserrat;
-  font-size: 36px;
+  @include option(font-size, 36, 16);
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
-  letter-spacing: -2px;
+  &::before {
+    content: "";
+    @include option(margin-right, 70, 22);
+    display: inline-block;
+    @include option(width, 57, 40);
+    @include option(height, 51, 36);
+  }
 }
 .download__buttons-row {
-  margin: 0 -100px;
-  height: 409.672px;
+  padding: 0 20px;
+  @include option(padding-top, 165, 70);
+  @include option(padding-bottom, 165, 70);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 36px;
+  @include option(gap, 36, 20);
   background: #FEC74E;
 }
 .download__button {
-
+  @include option(height, 85, 38);
+  @include option(width, 290, 130);
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .download__decor  {
   position: absolute;
   top: 44px;
-  right: 0;
-  width: 625px;
-  height: 979px;
+  @include option(right, 162, 20);
+  @include option(height, 979, 420);
+  @include option(width, 625, 268);
   &::before {
     content: "";
     position: absolute;
-    top: 212px;
+    @include option(top, 212, 50);
     display: inline-block;
-    width: 577px;
-    height: 577px;
+    @include option(height, 577, 250);
+    @include option(width, 577, 258);
     border-radius: 577px;
     filter: blur(152px);
     background: linear-gradient(175deg, #FFF -72.92%, rgba(255, 255, 255, 0.00) 83.07%);
@@ -103,15 +97,45 @@
   img {
     position: relative;
     z-index: 4;
+    width: 100%;
+    height: 100%;
   }
   &::after {
     content: "";
     position: absolute;
-    right: -100px;
     display: inline-block;
-    width: 1255.516px;
-    height: 886.55px;
+    right: -100px;
+    @include option(height, 886, 252);
+    @include option(width, 1255, 357);
     opacity: 0.05;
     background: url(../../../images/download/display/decor.svg) center/ 100% no-repeat;
+  }
+}
+
+@media (max-width:1024px) {
+  .download__content {
+    @include option(padding-bottom, 534, 360);
+  }
+  .download__buttons-row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .download__decor  {
+    top: initial;
+    left: 50%;
+    transform: translateX(-50%);
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+      filter: blur(42px);
+    }
+    &::after {
+      right: initial;
+      @include option(left, -62, -35);
+      transform: rotateZ(180deg);
+    }
+  }
+  .download__item-text {
+    justify-content: center;
   }
 }

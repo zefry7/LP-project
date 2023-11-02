@@ -1,14 +1,19 @@
 .info {
   overflow: hidden;
-  padding: 0 100px;
+  @include option(padding-left, 160, 20);
+  @include option(padding-right, 160, 20);
+  @include option(padding-top, 165, 48);
+  @include option(padding-bottom, 165, 55);
   background: #0F3017;
 
   .button {
+    margin-bottom: 50px;
     align-self: center;
+    position: relative;
+    z-index: 2;
   }
 }
 .info__content {
-  padding: 165px 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -18,64 +23,68 @@
     left: -229px;
     bottom: -260px;
     display: inline-block;
-    width: 927.562px;
-    height: 683.782px;
+    @include option(width, 927, 284);
+    @include option(height, 684, 346);
     opacity: 0.05;
     background: url(../../../images/download/display/decor.svg) center/ 100% no-repeat;
   }
 }
 .info__title{
-  margin-bottom: 112px;
-  width: 1000px;
+  position: relative;
+  z-index: 2;
+  @include option(margin-bottom, 112, 30);
+  @include option(width, 1000, 289);
   color: #FFF;
   font-family: Montserrat;
-  font-size: 84px;
+  @include option(font-size, 84, 26);
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
 }
 .info__price {
-  margin-bottom: 183px;
+  position: relative;
+  z-index: 2;
+  @include option(margin-bottom, 183, 36);
   color: #FEC74E;
   font-family: Montserrat;
-  font-size: 74px;
+  @include option(font-size, 74, 26);
   font-style: normal;
   font-weight: 700;
-  line-height: 115.5%;
+  line-height: 120%;
   position: relative;
   &::before {
     content: "";
     display: inline-block;
     position: absolute;
-    width: 764px;
-    height: 136px;
-    top: -20px;
-    left: -32px;
-    fill: #FEC74E;
+    @include option(width, 764, 288);
+    @include option(height, 136, 63);
+    @include option(top, -15);
+    @include option(left, -32, -8);
     background: url(../../../images/info/display/price-border.svg) center/ 100% no-repeat;
   }  
   &::after {
     content: "ДЖЕКПОТ";
     position: absolute;
-    top: -40px;
-    left: 60px;
+    @include option(top, -40, -18);
+    @include option(left, 60, 22);
     display: inline-block;
     color: #FEC74E;
     font-family: Montserrat;
-    font-size: 32px;
+    @include option(font-size, 32, 13.4);
     font-style: normal;
     font-weight: 700;
-    line-height: 41.229px; 
+    line-height: 128%; 
     letter-spacing: 1.097px;
     text-transform: uppercase;
   }
 }
 .info__decor {
-  width: 940px;
-  height: 1003px;
+  @include option(width, 749, 397);
+  @include option(height, 1003, 344);
   position: absolute;
-  top: 64px;
-  right: -100px;
+  z-index: 0;
+  @include option(top, -100, -50);
+  @include option(right, -150, -100);
   img {
     position: relative;
     z-index: 4;
@@ -88,10 +97,34 @@
     top: 150px;
     right: -220px;
     display: inline-block;
-    width: 1000px;
-    height: 1000px;
+    @include option(width, 1000, 200);
+    @include option(height, 1000, 200);
     border-radius: 577px;
     filter: blur(152px);
     background: linear-gradient(175deg, #FFF -72.92%, rgba(255, 255, 255, 0.00) 83.07%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .info__price {
+    text-align: center;
+  }
+  .info__decor {
+    position: static;
+
+    &::before {
+      top: initial;
+      bottom: 100px;
+      right: 50%;
+      transform: translateX(50%);
+      filter: blur(42px);
+    }
+  }
+  .info__content {
+    &::after {
+      transform: rotateZ(180deg);
+      @include option(left, -229, -110);
+      @include option(bottom, -260, 60);
+    }
   }
 }

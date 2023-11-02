@@ -8,9 +8,9 @@ $PORTRAIT: "screen and (orientation: portrait)";
 //$TABLET_MEDIA: "screen and (min-width: #{$TABLET}) and (max-width: #{$DESKTOP - 1}) and (orientation: portrait)";
 //$DESKTOP_MEDIA: "screen and (min-width: #{$DESKTOP}), screen and (orientation: landscape)";
 
-$MOBILE_MEDIA: "screen and (max-width: #{$TABLET - 1})";
-$TABLET_MEDIA: "screen and (min-width: #{$TABLET}) and (max-width: #{$TABLET-L - 1})";
-$TABLET-L_MEDIA: "screen and (min-width: #{$TABLET-L}) and (max-width: #{$DESKTOP - 1}) and (orientation: landscape)";
+$MOBILE_MEDIA: "screen and (max-width: #{$TABLET-L - 1})";
+$TABLET_MEDIA: "screen and (min-width: #{$TABLET}) and (max-width: #{$TABLET-L - 1}) and (orientation: landscape)";
+$TABLET-L_MEDIA: "screen and (min-width: #{$TABLET-L}) and (max-width: #{$DESKTOP - 1})";
 $DESKTOP_MEDIA: "screen and (min-width: #{$DESKTOP})";
 
 @mixin MOBILE() {

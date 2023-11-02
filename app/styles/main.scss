@@ -12,12 +12,12 @@
     overflow: hidden;
 }
 .button {
-    width: 465px;
-    height: 94px;
+    @include option(width, 465, 278);
+    @include option(height, 94, 55);
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
-    font-size: 28px;
+    @include option(font-size, 28, 18);
     font-style: normal;
     font-weight: 700;
     line-height: 116%; 

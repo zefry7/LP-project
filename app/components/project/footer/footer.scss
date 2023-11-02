@@ -120,7 +120,7 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
-    gap: 15px;
+    @include option(gap, 25, 15);
     width: 100%;
   }
   .footer__name-row {
@@ -135,6 +135,3 @@
   }
 }
 
-@media (max-width: 768px) {
-
-}
