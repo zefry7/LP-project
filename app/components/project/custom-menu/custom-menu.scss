@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 62px;
+  @include option(gap, 80, 0);
   width: max-content;
 
   &__item {
@@ -17,7 +17,7 @@
 
   &__item-link {
     display: block;
-    margin: 0 1em;
+    margin: 0;
     // @include is-burger(){
     //   margin: 1em auto;
     //   text-align: center;
@@ -35,10 +35,10 @@
   z-index: 5;
   color: #212121;
   font-family: Montserrat;
-  font-size: 16px;
+  @include option(font-size, 16, 14);
   font-style: normal;
   font-weight: 700;
-  line-height: 30.116px; 
+  line-height: 180%; 
   text-transform: uppercase;
   position: relative;
   display: flex;
@@ -46,7 +46,7 @@
   &:hover::after {
       content: "";
       display: inline-block;
-      height: 3px;
+      @include option(height, 3, 1);
       position: absolute;
       bottom: 0;
       background-color: black;

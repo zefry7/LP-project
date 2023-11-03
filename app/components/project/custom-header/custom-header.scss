@@ -4,18 +4,29 @@
 @include header(Y);
 
 .header {
-  display: none !important;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 190px;
+  @include option(height, 190, 90);
   margin-bottom: 32px;
-  padding: 40px 162px 0 100px;
+  @include option(padding-top, 40, 22);
+  @include option(padding-left, 100, 20);
+  @include option(padding-right, 100, 20);
+  @include option(padding-bottom, 40, 17);
   max-height: max-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .header {
+    flex-direction: row-reverse
+  }
+  .header__burger {
+    display: flex !important;
+  }
 }
 
 .custom-header {
@@ -27,27 +38,33 @@
   }
 
   &__logo {
-    width: 105px;
-    height: 110px;
+    @include option(width, 105, 48);
+    @include option(height, 110, 51);
     position: relative;
     z-index: 5;
     img {
         max-width: 100%;
+        width: 100%;
         height: auto;
     }
-    display: inline-block;
-    vertical-align: middle;
-    width: 88px;
-    height: 89px;
-    background: image("header/logo_pep.svg") no-repeat center {
-      size: contain;
-    };
+    // background: image("header/logo_pep.svg") no-repeat center {
+    //   size: contain;
+    // };
   }
 
   &__burger {
-    width: 40px;
-    margin: 20px;
-    float: right;
+    display: none !important;
+    @include option(height, 40, 27);
+    @include option(width, 50, 26);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      @include option(height, 5, 3);
+      border-radius: 15px;
+      width: 100%;
+    }
   }
   &__wrapper {
     display: inline-block;

@@ -1,11 +1,11 @@
 .intro {
-    height: 1080px;
+    @include option(height, 1080, 600);
     width: 100%;
     position: relative;
     overflow: hidden;
 
     .swiper-slide {
-        height: 1080px;
+        @include option(height, 1080, 600);
     }
     .swiper-slide-active {
         .intro__name {
@@ -15,12 +15,12 @@
     }
     .swiper-pagination {
         position: absolute;
-        bottom: 175px;
+        @include option(bottom, 175, 31);
         right: 0;
         display: flex;
         justify-content: center;
         gap: 30px;
-        width: 830px;
+        width: 40%;
     }
     .swiper-pagination-bullet {
         display: inline-block;
@@ -30,11 +30,6 @@
         opacity: 0.7;
         background: #F7F7F7;
     }
-    .swiper-pagination-bullet-active {
-        opacity: 1;
-        animation: anim-width-pb 5.5s linear;
-        animation-fill-mode: forwards;
-    } 
     .intro__swiper-img {
         height: 100%;
     }
@@ -50,17 +45,16 @@
     }
 }
 .intro__main {
-    margin-top: 190px;
+    @include option(margin-top, 190, 90);
     display: flex;
-    padding-left: 160px;
+    @include option(padding-left, 160, 20);
 }
 .intro__decor {
     position: absolute;
     top: 0;
     z-index: 0;
-    height: 1147px;
-    max-width: 1090px;
-    width: 100%;
+    @include option(height, 1147, 371);
+    width: 60%;
     background: rgba(0, 0, 0, 0.10);
     backdrop-filter: blur(15px);
     overflow: hidden;
@@ -85,22 +79,22 @@
     flex: 1 0 50%;
 
     .intro__title {
-        margin-bottom: 28px;
-        height: 288px;
-        width: 800px;
+        @include option(margin-bottom, 28, 35);
+        @include option(height, 288, 84);
+        @include option(width, 800, 280);
         color:  #212121;
         font-family: Montserrat;
-        font-size: 84px;
+        @include option(font-size, 84, 28);
         font-style: normal;
         font-weight: 700;
         line-height: 100%; 
     }
     .intro__price {
-        margin-bottom: 87px;
+        @include option(margin-bottom, 87, 30);
         width: max-content;
         color: #350296;
         font-family: Montserrat;
-        font-size: 74px;
+        @include option(font-size, 74, 26);
         font-style: normal;
         font-weight: 700;
         line-height: 115.5%;
@@ -109,29 +103,29 @@
             content: "";
             display: inline-block;
             position: absolute;
-            width: 764px;
-            height: 136px;
-            top: -20px;
-            left: -32px;
-            background: url(../../../images/intro/display/price-border.png) center/ 754px 136px no-repeat;
+            @include option(width, 764, 283);
+            @include option(height, 136, 43);
+            @include option(top, -20, -7);
+            @include option(left, -32, -15);
+            background: url(../../../images/intro/display/price-border.png) center/ 100% 100% no-repeat;
         } 
         &::after {
             content: "ДЖЕКПОТ";
             position: absolute;
-            top: -40px;
-            left: 60px;
+            @include option(top, -40, -17);
+            @include option(left, 60, 15);
             display: inline-block;
             color: #350296;
             font-family: Montserrat;
-            font-size: 32px;
+            @include option(font-size, 32, 13.4);
             font-style: normal;
             font-weight: 700;
-            line-height: 41.229px; 
-            letter-spacing: 1.097px;
+            line-height: 128%; 
             text-transform: uppercase;
         }
     }
     .intro__tv-row {
+        @include option(left, 94, 20);
         margin-bottom: 94px;
         height: max-content;
         display: flex;
@@ -175,15 +169,15 @@
     align-items: flex-end;
 
     .intro__img-label {
-        width: 210.321px;
-        height: 210.321px;
+        @include option(width, 210, 98);
+        @include option(height, 210, 98);
         border-radius: 50%;
         background: linear-gradient(128deg, #FFCD17 11.28%, #FFE689 80.34%);
         backdrop-filter: blur(2px);
         position: relative;
         img {
-            width: 81.712px;
-            height: 81.712px;
+            @include option(width, 82, 38);
+            @include option(height, 82, 38);
             position: absolute;
             top: 50%;
             left: 50%;
@@ -192,18 +186,18 @@
         &::before {
             content: "";
             display: inline-block;
-            width: 180.176px;
-            height: 120px;
+            @include option(width, 180, 84);
+            @include option(height, 120, 56);
             position: absolute;
             right: -5px;
             transform: scale(1.1);
-            background: url("../../../images/intro/display/label-text.png") center/ 100% no-repeat;
+            background: url("../../../images/intro/display/label-text.png") center/ 100% 100% no-repeat;
         }
         &::after {
             content: "";
             display: inline-block;
-            width: 167.036px;
-            height: 90px;
+            @include option(width, 167, 77);
+            @include option(height, 90, 43);
             position: absolute;
             left: 0;
             bottom: 0;
@@ -215,12 +209,12 @@
 .intro__name {
     opacity: 0;
     text-align: center;
-    width: 830px;
+    width: 40%;
     position: absolute;
-    bottom: 310px;
+    @include option(bottom, 310, 60);
     right: 0;
     font-family: Montserrat;
-    font-size: 114px;
+    @include option(font-size, 100, 36);
     font-style: normal;
     font-weight: 800;
     line-height: 100%; 
@@ -230,6 +224,45 @@
     -webkit-text-fill-color: transparent;
 }
 
+@media (min-width: 1024px) {
+    .intro {
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            animation: anim-width-pb 5.5s linear;
+            animation-fill-mode: forwards;
+        } 
+    }
+}
 
-
+@media (max-width: 1023px) {
+    .intro {
+        .swiper-pagination {
+            width: 100%;
+        }
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            transform: scale(1.5);
+        } 
+        .intro__main {
+            display: flex;
+            flex-direction: column;
+            @include option(padding-right, 160, 20);
+        }
+    }
+    .intro__left-block {
+        .intro__tv-row {
+            display: none;
+        }
+    }
+    .intro__decor {
+        width: 100%;
+    }
+    .intro__name {
+        width: 100%;
+    }
+    .intro__right-block {
+        padding: 0;
+        @include option(padding-top, 40, 20);
+    }
+}
 
