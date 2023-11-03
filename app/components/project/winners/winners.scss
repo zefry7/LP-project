@@ -1,75 +1,90 @@
 .winners {
-  padding: 160px 100px 80px;
+  @include option(padding-top, 160, 55);
+  @include option(padding-left, 100, 20);
+  @include option(padding-right, 100, 20);
+  @include option(padding-bottom, 80, 55);
   background: #0F3017;
   overflow: hidden;
   .swiper-container {
     overflow: visible;
+    @include option(width, 1720, 280);
   }
   .swiper-slide {
     width: max-content;
   }
 
   .winners__pagination {
-    margin-bottom: 110px;
+    @include option(margin-bottom, 110, 35);
     align-self: center;
     display: flex;
-    gap: 30px;
-    width: max-content;
+    @include option(gap, 30, 15);
   }
   .swiper-pagination-bullet {
       display: inline-block;
+      position: relative;
       height: 10px;
-      width: 10px;
+      min-width: 10px;
       border-radius: 10px;
       opacity: 0.7;
       background: #F7F7F7;
-  }
-  .swiper-pagination-bullet-active {
-      opacity: 1;
-      animation: anim-width-pb 5.5s linear;
-      animation-fill-mode: forwards;
   }
   .button {
     align-self: center;
   }
 }
 .winners__content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, auto);
 }
 .winners__row-title  {
-  margin-bottom: 85px;
+  @include option(margin-bottom, 85, 30);
   display: flex;
   justify-content: space-between;
 }
 .winners__title {
   color: var(--white, #FFF);
   font-family: Montserrat;
-  font-size: 74px;
+  @include option(width, 840, 172);
+  @include option(font-size, 74, 26);
   font-style: normal;
   font-weight: 700;
   line-height: 115.5%; 
 }
 .winners__history {
+  justify-self: end;
   display: flex;
+  justify-content: space-between;
   gap: 48px;
 }
 .winners__history-text {
-  width: 278px;
+  @include option(width, 278, 184);
   color: var(--white, #FFF);
   font-family: Montserrat;
-  font-size: 24px;
+  @include option(font-size, 24, 16);
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
 }
+.winners__history-img {
+  @include option(width, 68, 54);
+  img {
+    width: 100%;
+  }
+}
+.winners__bottom-block {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+}
 .winners__list {
-  margin-bottom: 70px;
+  @include option(margin-bottom, 70, 25);
 }
 .winners__item {
   border-radius: 15px;
-  width: 465px;
-  height: 630px;
+  @include option(height, 630, 430);
+  @include option(width, 465, 280);
   background: white;
 }
 .winners__item-img {
@@ -99,7 +114,7 @@
   color: var(--grey-day-900, #212121);
   text-align: center;
   font-family: Montserrat;
-  font-size: 40px;
+  @include option(font-size, 40, 25);
   font-style: normal;
   font-weight: 700;
   line-height: 116%; 
@@ -109,8 +124,67 @@
   color: var(--grey-day-900, #212121);
   text-align: center;
   font-family: Montserrat;
-  font-size: 20px;
+  @include option(font-size, 20, 16);
   font-style: normal;
   font-weight: 400;
   line-height: 116%; 
+}
+
+@media (min-width: 1024px) {
+  .winners {
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      animation: anim-width-pb 5.5s linear;
+      animation-fill-mode: forwards;
+    } 
+  }
+}
+
+@media (max-width: 1023px) {
+  .winners__item {
+    max-height: 530px;
+  }
+  .winners {
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      transform: scale(1.5);
+    } 
+    .button {
+      margin-bottom: 36px;
+    }
+    .winners__content {
+      display: grid;
+      grid-template-columns: repeat(1, 100%);
+      grid-template-rows: repeat(3, auto);
+    }
+    .swiper-container {
+      margin: 0;
+    }
+    .button {
+      align-self: flex-start;
+    }
+  }
+  .winners__history {
+    align-items: center;
+    width: 100%;
+    order: 3;
+    justify-self: self-start;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .winners__item-present {
+    @include option(font-size, 40, 15);
+  }
+  .winners__item-name {
+    @include option(font-size, 20, 10);
+  }
+}
+
+@media (max-width: 767px) {
+  .winners {
+    .winners__item, .swiper-wrapper, .swiper-container {
+      max-width: 500px;
+    }
+  }
 }

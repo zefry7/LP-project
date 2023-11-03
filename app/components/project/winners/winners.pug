@@ -3,14 +3,15 @@ mixin winners(content, params)
     .winners__content 
       .winners__row-title 
         p.winners__title!=content.title
-        .winners__history
-          p.winners__history-text!= content.buttonHistory.text
-          .winners__history-img 
-            img(src!=content.buttonHistory.img, alt="")
-      .winners__list
-        +carousel(content.list, "winnersList")(data-carousel="carouselWinners")
-      .winners__pagination
-      +button(content.button)
+      .winners__history
+        p.winners__history-text!= content.buttonHistory.text
+        .winners__history-img 
+          img(src!=content.buttonHistory.img, alt="")
+      .winners__bottom-block
+        .winners__list
+          +carousel(content.list, "winnersList")(data-carousel="carouselWinners")
+        .winners__pagination
+        +button(content.button)
       
 mixin winnersList(content, params)
   .winners__item&attributes(attributes)

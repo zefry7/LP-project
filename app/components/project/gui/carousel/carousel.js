@@ -41,8 +41,7 @@ const PRESETS = {
     }
   },
   carouselWinners: {
-    slidesPerView: 3.5,
-    spaceBetween: 20,
+    // slidesPerView: 'auto',
     autoplay: {
       delay: 5000,
     },
@@ -50,6 +49,24 @@ const PRESETS = {
       el: ".winners__pagination",
       type: "bullets",
       clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 3.5,
+        spaceBetween: 20
+      }
     }
   },
   carouselTravel: {
