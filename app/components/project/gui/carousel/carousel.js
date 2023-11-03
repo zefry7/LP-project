@@ -41,7 +41,6 @@ const PRESETS = {
     }
   },
   carouselWinners: {
-    // slidesPerView: 'auto',
     autoplay: {
       delay: 5000,
     },
@@ -73,6 +72,24 @@ const PRESETS = {
     pagination: {
       el: ".travel__pagination",
       type: "bullets",
+    }
+  },
+  carouselOnlineBuy: {
+    pagination: {
+      el: ".onlineBuy__pagination",
+      type: "bullets",
+    },
+    breakpoints: {
+      320: {
+        enabled: true,
+        slidesPerView: 1,
+        spaceBetween: 48,
+      },
+      1024: {
+        enabled: false,
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
     }
   }
 };
