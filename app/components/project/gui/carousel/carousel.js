@@ -49,6 +49,8 @@ const PRESETS = {
       el: ".winners__pagination",
       type: "bullets",
       clickable: true,
+      dynamicBullets: true,
+      dynamicMainBullets: 5
     },
     breakpoints: {
       320: {

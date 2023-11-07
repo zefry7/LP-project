@@ -14,19 +14,20 @@
   }
 
   .winners__pagination {
+    overflow: hidden;
     @include option(margin-bottom, 110, 35);
     align-self: center;
     display: flex;
-    @include option(gap, 30, 15);
   }
   .swiper-pagination-bullet {
-      display: inline-block;
-      position: relative;
-      height: 10px;
-      min-width: 10px;
-      border-radius: 10px;
-      opacity: 0.7;
-      background: #F7F7F7;
+    margin: 0 5px;
+    display: inline-block;
+    position: relative;
+    height: 10px;
+    min-width: 10px;
+    border-radius: 10px;
+    opacity: 0.7;
+    background: #F7F7F7;
   }
   .button {
     align-self: center;
@@ -145,9 +146,21 @@
     max-height: 530px;
   }
   .winners {
+    .swiper-pagination-bullet-active-main,
+    .swiper-pagination-bullet-active-prev,
+    .swiper-pagination-bullet-active-next {
+      transition: all 0.1s linear;
+      transform: scale(0.8);
+    }
+    .swiper-pagination-bullet-active-prev-prev,
+    .swiper-pagination-bullet-active-next-next {
+      transition: all 0.1s linear;
+      transform: scale(0.5);
+    }
     .swiper-pagination-bullet-active {
       opacity: 1;
-      transform: scale(1.5);
+      transform: scale(1);
+      transition: all 0.1s linear;
     } 
     .button {
       margin-bottom: 36px;
