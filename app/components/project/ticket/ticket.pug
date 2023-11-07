@@ -1,14 +1,16 @@
 mixin ticket(content)
     section#ticket.ticket
         .ticket__content
-            p.ticket__label!= content.label
-            p.ticket__title!= content.title
-            p.ticket__subtitle!= content.subtitle
-            ul.ticket__list
-                each v in content.items 
-                    li.ticket__item!=v.text
-            +button(content.button)
-            p.ticket__private!= content.private
+            .ticket__info
+                p.ticket__label!= content.label
+                p.ticket__title!= content.title
+                p.ticket__subtitle!= content.subtitle
+                ul.ticket__list
+                    each v in content.items 
+                        li.ticket__item!=v.text
+                .ticket__info-bottom  
+                    +button(content.button)
+                    p.ticket__private!= content.private
             .ticket__decor 
                 +picture(content.decorImg)
 

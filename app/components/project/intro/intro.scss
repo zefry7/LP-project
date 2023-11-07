@@ -19,7 +19,7 @@
         right: 0;
         display: flex;
         justify-content: center;
-        gap: 30px;
+        @include option(gap, 30, 15);
         width: 40%;
     }
     .swiper-pagination-bullet {

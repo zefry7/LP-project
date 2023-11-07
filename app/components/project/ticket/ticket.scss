@@ -5,30 +5,38 @@
     .button {
         margin-bottom: 40px;
         width: 327.085px;
-        height: 78.373px;
+        @include option(height, 78, 54);
         border-radius: 12px;
         background: #FFCD17;
         color: #212121;
         text-align: center;
         font-family: Roboto;
-        font-size: 24px;
+        @include option(font-size, 24, 18);
         font-style: normal;
         font-weight: 700;
     }
 }
 .ticket__content {
-    padding: 64px 120px;
+    display: flex;
+    @include option(padding-top, 64, 44);
+    @include option(padding-left, 120, 20);
+    @include option(padding-right, 120, 20);
+    @include option(padding-bottom, 64, 44);
     border-radius: 36.009px;
     background: linear-gradient(288deg, #D44F40 -95%, #7701B0 105.93%);
     position: relative;
 }
+.ticket__info {
+    position: relative;
+    z-index: 5;
+}
 .ticket__label {
-    width: 468px;
+    @include option(width, 468, 250);
     font-family: Montserrat;
-    font-size: 30px;
+    @include option(font-size, 30, 16);
     font-style: normal;
     font-weight: 700;
-    line-height: 33.02px; 
+    line-height: 110%; 
     background: linear-gradient(270deg, #FCFF01 30.39%, #FF9406 60.64%, #F559C8 90.45%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -36,45 +44,46 @@
 }
 .ticket__title {
     margin-bottom: 13px;
-    width: 593px;
+    width: 700px;
     font-family: Montserrat;
-    font-size: 72.019px;
+    @include option(font-size, 72, 26);
     font-style: normal;
     font-weight: 700;
-    line-height: 75.02px; 
+    line-height: 120%; 
     background: linear-gradient(270deg, #FCFF01 30.39%, #FF9406 60.64%, #F559C8 90.45%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter:drop-shadow( -0px 4px 9px rgba(0, 0, 0, 0.50) );
 }
 .ticket__subtitle {
-    margin-bottom: 35px;
+    @include option(margin-bottom, 35, 22);
     color: #FFF;
     font-family: Montserrat;
-    font-size: 36.009px;
+    @include option(width, 950, 210);
+    @include option(font-size, 36, 16.01);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 .ticket__list {
-    margin-bottom: 73px;
+    @include option(margin-bottom, 73, 33);
     & .ticket__item:nth-child(1) {
         &::before{
             content: "";
-            margin-right: 45px;
+            @include option(margin-right, 45, 17);
             display: inline-block;
-            min-width: 81.021px;
-            height: 63.016px;
+            @include option(min-width, 81, 28);
+            @include option(height, 63, 22);
             background: url(../../../images/ticket/display/decor-1.png) center/ 100% no-repeat;
         }
     }
     & .ticket__item:nth-child(2) {
         &::before{
             content: "";
-            margin-right: 45px;
+            @include option(margin-right, 45, 17);
             display: inline-block;
-            min-width: 79.521px;
-            height: 81.021px;
+            @include option(min-width, 79, 27);
+            @include option(height, 81, 27);
             background: url(../../../images/ticket/display/decor-2.png) center/ 100% no-repeat;
         }
     }
@@ -82,47 +91,92 @@
         margin-bottom: 0px;
         &::before{
             content: "";
-            margin-right: 45px;
+            @include option(margin-right, 45, 17);
             display: inline-block;
-            min-width: 81.021px;
-            height: 96px;
+            @include option(min-width, 81, 28);
+            @include option(height, 96, 31);
             background: url(../../../images/ticket/display/decor-3.png) center/ 100% no-repeat;
         }
     }
 }
 .ticket__item {
-    width: 490px;
+    @include option(width, 490, 250);
     display: flex;
     margin-bottom: 30px;
     align-items: center;
     color: #FFF;
     font-family: Roboto;
-    font-size: 21.005px;
+    @include option(font-size, 21, 12);
     font-style: normal;
     font-weight: 400;
-    line-height: 36.009px; 
+    line-height: 140%; 
+}
+.ticket__info-bottom {
+    display: flex;
+    flex-direction: column;
 }
 .ticket__private {
     display: flex;
     align-items: center;
     color: #FFCD17;
     font-family: Roboto;
-    font-size: 21.005px;
+    @include option(font-size, 21, 12);
     font-style: normal;
     font-weight: 400;
-    line-height: 30px; 
+    line-height: 140%; 
     text-decoration-line: underline;
     &::before {
-        margin-right: 20px;
+        @include option(margin-right, 20, 12);
         content: "";
         display: inline-block;
-        width: 30.008px;
-        height: 21.005px;
+        @include option(width, 30, 20);
+        @include option(height, 21, 14);
         background: url(../../../images/ticket/display/book.png) center/ 100% no-repeat;
     }
 }
 .ticket__decor {
+    max-width: 70%;
     position: absolute;
-    top: -39px;
+    top: calc(50% - 39px);
+    transform: translateY(-50%);
     right: -114px;
+}
+
+@media (max-width: 1023px) {
+    .ticket{
+        padding: 0;
+
+        .button {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+    .ticket__content {
+        display: block;
+        border-radius: 0;
+        background: linear-gradient(180deg, #300097 0%, #A21E6D 50%);
+    }
+    .ticket__info-bottom {
+        flex-direction: column-reverse;
+    }
+    .ticket__title {
+        width: 100%;
+    }
+    .ticket__decor {
+        max-width: 100%;
+        margin: 0 -20px;
+        left: calc(50% + 20px);
+        top: initial;
+        @include option(bottom, 400, 140);
+        transform: translateX(-50%);
+        width: 100%;
+        @include option(height, 243);
+        img {
+            object-position: center;
+            width: 100%;
+        }
+    }
+    .ticket__private {
+        @include option(margin-bottom, 293);
+    }
 }
