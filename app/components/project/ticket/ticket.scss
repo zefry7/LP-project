@@ -6,6 +6,7 @@
         @include option(margin-bottom, 40);
         @include option(width, 327);
         background: #FFCD17;
+        color: black;
         &:hover {
             transition: all 0.3s linear;
             background: #dfb313;

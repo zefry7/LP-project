@@ -12,3 +12,8 @@
     overflow: hidden;
 }
 
+@include NOT-DESKTOP() {
+    .body-lock {
+        overflow: hidden;
+    }
+}

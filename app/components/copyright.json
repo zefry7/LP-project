@@ -91,15 +91,15 @@
       "bc": [
         {
           "img": {
-            "img": "../images/intro/display/main-1.png",
+            "img": "../images/intro/display/main-1.jpg",
             "alt": "Фон",
             "source": [
               {
-                "srcSet": "../images/intro/display/main-1.png",
+                "srcSet": "../images/intro/display/main-1.jpg",
                 "media": "(min-width: 768px)"
               },
               {
-                "srcSet": "../images/intro/mobile/main-1.png",
+                "srcSet": "../images/intro/mobile/main-1.jpg",
                 "media": "(max-width: 768px)"
               }
             ]
@@ -108,15 +108,15 @@
         },
         {
           "img": {
-            "img": "../images/intro/display/main-2.png",
+            "img": "../images/intro/display/main-2.jpg",
             "alt": "Фон",
             "source": [
               {
-                "srcSet": "../images/intro/display/main-2.png",
+                "srcSet": "../images/intro/display/main-2.jpg",
                 "media": "(min-width: 768px)"
               },
               {
-                "srcSet": "../images/intro/mobile/main-2.png",
+                "srcSet": "../images/intro/mobile/main-2.jpg",
                 "media": "(max-width: 768px)"
               }
             ]
@@ -125,15 +125,15 @@
         },
         {
           "img": {
-            "img": "../images/intro/display/main-3.png",
+            "img": "../images/intro/display/main-3.jpg",
             "alt": "Фон",
             "source": [
               {
-                "srcSet": "../images/intro/display/main-3.png",
+                "srcSet": "../images/intro/display/main-3.jpg",
                 "media": "(min-width: 768px)"
               },
               {
-                "srcSet": "../images/intro/mobile/main-3.png",
+                "srcSet": "../images/intro/mobile/main-3.jpg",
                 "media": "(max-width: 768px)"
               }
             ]
@@ -142,15 +142,15 @@
         },
         {
           "img": {
-            "img": "../images/intro/display/main-4.png",
+            "img": "../images/intro/display/main-4.jpg",
             "alt": "Фон",
             "source": [
               {
-                "srcSet": "../images/intro/display/main-4.png",
+                "srcSet": "../images/intro/display/main-4.jpg",
                 "media": "(min-width: 768px)"
               },
               {
-                "srcSet": "../images/intro/mobile/main-4.png",
+                "srcSet": "../images/intro/mobile/main-4.jpg",
                 "media": "(max-width: 768px)"
               }
             ]
@@ -159,15 +159,15 @@
         },
         {
           "img": {
-            "img": "../images/intro/display/main-5.png",
+            "img": "../images/intro/display/main-5.jpg",
             "alt": "Фон",
             "source": [
               {
-                "srcSet": "../images/intro/display/main-5.png",
+                "srcSet": "../images/intro/display/main-5.jpg",
                 "media": "(min-width: 768px)"
               },
               {
-                "srcSet": "../images/intro/mobile/main-5.png",
+                "srcSet": "../images/intro/mobile/main-5.jpg",
                 "media": "(max-width: 768px)"
               }
             ]
@@ -287,15 +287,15 @@
       }
     ],
     "decor": {
-      "img": "../images/download/display/tel-img.png",
+      "img": "../images/download/display/tel-img.webp",
       "alt": "Элемент оформления",
       "source": [
         {
-          "srcSet": "../images/download/display/tel-img.png",
+          "srcSet": "../images/download/display/tel-img.webp",
           "media": "(min-width: 768px)"
         },
         {
-          "srcSet": "../images/download/mobile/tel-img.png",
+          "srcSet": "../images/download/mobile/tel-img.webp",
           "media": "(max-width: 768px)"
         }
       ]
@@ -405,29 +405,29 @@
     "right": {
       "gr": [
         {
-          "img": "../images/footer/display/gr-1.png",
+          "img": "../images/footer/display/gr-1.webp",
           "alt": "Герб",
           "source": [
             {
-              "srcSet": "../images/footer/display/gr-1.png",
+              "srcSet": "../images/footer/display/gr-1.webp",
               "media": "(min-width: 768px)"
             },
             {
-              "srcSet": "../images/footer/mobile/gr-1.png",
+              "srcSet": "../images/footer/mobile/gr-1.webp",
               "media": "(max-width: 768px)"
             }
           ]
         },
         {
-          "img": "../images/footer/display/gr-2.png",
+          "img": "../images/footer/display/gr-2.webp",
           "alt": "Герб",
           "source": [
             {
-              "srcSet": "../images/footer/display/gr-2.png",
+              "srcSet": "../images/footer/display/gr-2.webp",
               "media": "(min-width: 768px)"
             },
             {
-              "srcSet": "../images/footer/mobile/gr-2.png",
+              "srcSet": "../images/footer/mobile/gr-2.webp",
               "media": "(max-width: 768px)"
             }
           ]
@@ -435,29 +435,29 @@
       ],
       "name": [
         {
-          "img": "../images/footer/display/name-1.png",
+          "img": "../images/footer/display/name-1.webp",
           "alt": "Организация",
           "source": [
             {
-              "srcSet": "../images/footer/display/name-1.png",
+              "srcSet": "../images/footer/display/name-1.webp",
               "media": "(min-width: 768px)"
             },
             {
-              "srcSet": "../images/footer/mobile/name-1.png",
+              "srcSet": "../images/footer/mobile/name-1.webp",
               "media": "(max-width: 768px)"
             }
           ]
         },
         {
-          "img": "../images/footer/display/name-2.png",
+          "img": "../images/footer/display/name-2.webp",
           "alt": "Организация",
           "source": [
             {
-              "srcSet": "../images/footer/display/name-2.png",
+              "srcSet": "../images/footer/display/name-2.webp",
               "media": "(min-width: 768px)"
             },
             {
-              "srcSet": "../images/footer/mobile/name-2.png",
+              "srcSet": "../images/footer/mobile/name-2.webp",
               "media": "(max-width: 768px)"
             }
           ]

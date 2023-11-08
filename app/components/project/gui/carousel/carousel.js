@@ -35,6 +35,7 @@ const PRESETS = {
     },
   },
   carouselJoin: {
+    spaceBetween: 20,
     pagination: {
       el: ".join__pagination",
       type: "bullets",

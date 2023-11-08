@@ -6,6 +6,7 @@ import "./gui/gui";
 
 // Элементы
 import "./preloader/preloader";
+import "./custom-header/custom-header"
 // require('./custom-modal/custom-modal');
 
 // Блоки
