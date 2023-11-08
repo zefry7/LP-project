@@ -1,5 +1,5 @@
 .onlineBuy {
-    padding: 0 100px;
+    @include option(padding, 0 100 0 100, 0 0 0 0);
     background: #0F3017;
     .swiper-container {
         display: flex;
@@ -10,185 +10,149 @@
     .swiper-wrapper {
         max-width: max-content;
     }
-    .onlineBuy__pagination {
+    &__pagination {
         display: none;
         @include option(margin-bottom, 110, 32);
         align-self: center;
         @include option(gap, 30, 15);
     }
-    .swiper-pagination-bullet {
-        display: inline-block;
-        position: relative;
-        height: 10px;
-        min-width: 10px;
-        border-radius: 10px;
-        opacity: 0.7;
-        background: #F7F7F7;
-    }
-    .swiper-pagination-bullet-active {
-        opacity: 1;
-        transform: scale(1.5);
-    } 
     .button {
         align-self: center;
-        position: relative;
         z-index: 5;
     }
-}
-.onlineBuy__content {
-    @include option(padding-top, 165, 55);
-    @include option(padding-left, 62, 20);
-    @include option(padding-right, 62, 20);
-    @include option(padding-bottom, 165, 55);
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: repeat(2, auto);
-    border-radius: 15px;
-    background: #FEC74E;
-    position: relative;
-    overflow: hidden;
-    &::before {
-        content: "";
-        display: inline-block;
-        width: 2089px;
-        height: 100%; 
-        position: absolute;
-        z-index: 1;
-        bottom: 0;
-        left: 0;
-        background: url("../../../images/onlineBuy/display/light.png") center/ 100% 100% no-repeat;
+    &__content {
+        @include padding-content-block;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: repeat(2, auto);
+        @include option(border-radius, 15);
+        background: #FEC74E;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            content: "";
+            display: inline-block;
+            @include option(width, 2089);
+            height: 100%; 
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            background: url("../../../images/onlineBuy/display/light.png") center/ 100% 100% no-repeat;
+        }
     }
-}
-.onlineBuy__row  {
-    @include option(margin-bottom, 100, 42);
-    display: flex;
-}
-.onlineBuy__title {
-    margin-right: auto;
-    @include option(width, 1000, 243);
-    color: #212121;
-    font-family: Montserrat;
-    @include option(font-size, 74, 26);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 115.5%;    
-}
-.onlineBuy__video {
-    justify-self: end;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 5;
-}
-.onlineBuy__video-text {
-    margin-right: 42px;
-    width: 153px;
-    color: #212121;
-    font-family: Montserrat;
-    @include option(font-size, 24);
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
-}
-.onlineBuy__video-img {
-    @include option(width, 68, 54);
-    img {
-      width: 100%;
-      height: 100%;
+    &__row  {
+        @include option(margin-bottom, 100, 42);
+        display: flex;
     }
-}
-.onlineBuy__bottom-block {
-    display: flex;
-    flex-direction: column;
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-.onlineBuy__list {
-    @include option(margin-bottom, 100, 23);
-    position: relative;
-    z-index: 5;
-    display: flex;
-    gap: 51px;
-}
-.onlineBuy__column {
-    @include option(max-width, 361, 280);
-    @include option(height, 555, 430);
-    @include option(padding-top, 30, 20);
-    @include option(padding-left, 30, 15);
-    @include option(padding-right, 30, 15);
-    @include option(padding-bottom, 30, 15);
-    border-radius: 15px;
-    background: #FFF;
-}
-.onlineBuy__img {
-    @include option(margin-bottom, 55, 35);
-    @include option(width, 130, 82);
-    @include option(height, 130, 82);
-    img {
-        max-width: 100%;
-        height: 100%;
+    &__title {
+        margin-right: auto;
+        @include option(width, 1000, 243);
+        color: #212121;
+        @include option(font-size, 74, 26);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 115.5%;    
     }
-}
-.onlineBuy__name {
-    margin-bottom: 10px;
-    @include option(width, 270, 244);
-    color: #212121;
-    font-family: Montserrat;
-    @include option(font-size, 23);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%; 
-}
-.onlineBuy__text {
-    color: #7D7272;
-    font-family: Montserrat;
-    @include option(font-size, 18, 14);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; 
+    &__video {
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+
+        &-text {
+            @include option(margin-right, 42);
+            @include option(width, 153);
+            color: #212121;
+            @include option(font-size, 24);
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+        }
+        &-img {
+            @include option(width, 68, 54);
+            img {
+              width: 100%;
+              height: 100%;
+            }
+        }
+    }
+    &__bottom-block {
+        display: flex;
+        flex-direction: column;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    &__list {
+        @include option(margin-bottom, 100, 23);
+        position: relative;
+        z-index: 5;
+        display: flex;
+        @include option(gap, 51);
+    }
+    &__column {
+        @include option(max-width, 361, 280);
+        @include option(height, 555, 430);
+        @include option(padding, 30 30 30 30, 20 15 15 15);
+        @include option(border-radius, 15);
+        background: #FFF;
+    }
+    &__img {
+        @include option(margin-bottom, 55, 35);
+        @include option(width, 130, 82);
+        @include option(height, 130, 82);
+        img {
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+    &__name {
+        @include option(margin-bottom, 10);
+        @include option(width, 270, 244);
+        color: #212121;
+        @include option(font-size, 23);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; 
+    }
+    &__text {
+        color: #7D7272;
+        @include option(font-size, 18, 14);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; 
+    }
 }
 
-@media (max-width: 1023px) {
+
+@include NOT-DESKTOP() {
     .onlineBuy {
         padding: 0;
         .button {
             align-self: self-start;
-            margin-bottom: 30px;
+            @include option(margin-bottom, 30);
         }
-        .onlineBuy__pagination {
+        &__pagination {
             display: flex;
         }
-    }
-    .onlineBuy__content {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, auto);
-        border-radius: 0;
-    }
-    .onlineBuy__video {
-        width: 100%;
-        order: 3;
-        justify-self: start;
-        justify-content: space-between;
-    }
-    .onlineBuy__name {
-        width: 100%;
-    }
-    .onlineBuy__video-text {
-        width: 100%;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1280px) {
-    .swiper-wrapper {
-
-    }
-}
-
-@media (max-width: 767px) {
-    .onlineBuy {
-        .onlineBuy__item, .swiper-wrapper, .swiper-container {
-            max-width: 500px;
+        &__content {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, auto);
+            border-radius: 0;
+        }
+        &__video {
+            width: 100%;
+            order: 3;
+            justify-self: start;
+            justify-content: space-between;
+        }
+        &__name {
+            width: 100%;
+        }
+        &__video-text {
+            width: 100%;
+            margin-right: auto;
         }
     }
 }

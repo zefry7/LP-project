@@ -11,17 +11,4 @@
 .custom-page {
     overflow: hidden;
 }
-.button {
-    @include option(width, 465, 278);
-    @include option(height, 94, 55);
-    color: #FFF;
-    text-align: center;
-    font-family: Montserrat;
-    @include option(font-size, 28, 18);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 116%; 
-    border-radius: 15px;
-    background: #E12D43;
-}
 

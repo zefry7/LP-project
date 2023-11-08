@@ -45,6 +45,18 @@ $DESKTOP_MEDIA: "screen and (min-width: #{$DESKTOP})";
   @media #{$MOBILE_MEDIA}, #{$TABLET_MEDIA} { @content; }
 }
 
+@mixin MOBILE-AND-TABLET {
+  @media (max-width: #{$TABLET}) {
+    @content;
+  }
+}
+
+@mixin NOT-MOBILE-AND-TABLET {
+  @media (min-width: #{$TABLET-L}) {
+    @content;
+  }
+}
 @mixin HOVER (){
   @media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0) { @content; }
 }
+

@@ -1,8 +1,5 @@
 .winners {
-  @include option(padding-top, 160, 55);
-  @include option(padding-left, 100, 20);
-  @include option(padding-right, 100, 20);
-  @include option(padding-bottom, 80, 55);
+  @include padding-wrapper-no-block;
   background: #0F3017;
   overflow: hidden;
   .swiper-container {
@@ -12,160 +9,149 @@
   .swiper-slide {
     width: max-content;
   }
-
-  .winners__pagination {
-    overflow: hidden;
-    @include option(margin-bottom, 110, 35);
-    align-self: center;
-    display: flex;
-  }
   .swiper-pagination-bullet {
-    margin: 0 5px;
+    @include option(margin, 0 5 0 5);
     display: inline-block;
     position: relative;
-    height: 10px;
-    min-width: 10px;
-    border-radius: 10px;
+    @include option(height, 10);
+    @include option(min-width, 10);
+    @include option(border-radius, 10);
     opacity: 0.7;
     background: #F7F7F7;
   }
   .button {
     align-self: center;
   }
-}
-.winners__content {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(2, auto);
-}
-.winners__row-title  {
-  @include option(margin-bottom, 85, 30);
-  display: flex;
-  justify-content: space-between;
-}
-.winners__title {
-  color: var(--white, #FFF);
-  font-family: Montserrat;
-  @include option(width, 840, 172);
-  @include option(font-size, 74, 26);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 115.5%; 
-}
-.winners__history {
-  justify-self: end;
-  display: flex;
-  justify-content: space-between;
-  gap: 48px;
-}
-.winners__history-text {
-  @include option(width, 278, 184);
-  color: var(--white, #FFF);
-  font-family: Montserrat;
-  @include option(font-size, 24, 16);
-  font-style: normal;
-  font-weight: 600;
-  line-height: 150%;
-}
-.winners__history-img {
-  @include option(width, 68, 54);
-  img {
-    width: 100%;
-  }
-}
-.winners__bottom-block {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  display: flex;
-  flex-direction: column;
-}
-.winners__list {
-  @include option(margin-bottom, 70, 25);
-}
-.winners__item {
-  border-radius: 15px;
-  @include option(height, 630, 430);
-  @include option(width, 465, 280);
-  background: white;
-}
-.winners__item-img {
-  padding-top: 20px;
-  height: 70%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  img {
-    max-width: 100%;
-    height: 100%;
-  }
-}
-.winners__item-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 30%;
-  width: 100%;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  background: #FEC74E;
-}
-.winners__item-present {
-  margin-bottom: 20px;
-  color: var(--grey-day-900, #212121);
-  text-align: center;
-  font-family: Montserrat;
-  @include option(font-size, 40, 25);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 116%; 
 
-}
-.winners__item-name {
-  color: var(--grey-day-900, #212121);
-  text-align: center;
-  font-family: Montserrat;
-  @include option(font-size, 20, 16);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 116%; 
-}
-
-@media (min-width: 1024px) {
-  .winners {
-    .swiper-pagination-bullet-active {
-      opacity: 1;
-      animation: anim-width-pb 5.5s linear;
-      animation-fill-mode: forwards;
-    } 
+  &__pagination {
+    overflow: hidden;
+    @include option(margin-bottom, 110, 35);
+    align-self: center;
+    display: flex;
   }
-}
-
-@media (max-width: 1023px) {
-  .winners__item {
-    max-height: 530px;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, auto);
   }
-  .winners {
-    .swiper-pagination-bullet-active-main,
-    .swiper-pagination-bullet-active-prev,
-    .swiper-pagination-bullet-active-next {
-      transition: all 0.1s linear;
-      transform: scale(0.8);
+  &__row-title  {
+    @include option(margin-bottom, 85, 30);
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    color:  #FFF;
+    @include option(width, 840, 172);
+    @include option(font-size, 74, 26);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115.5%; 
+  }
+  &__history {
+    justify-self: end;
+    display: flex;
+    justify-content: space-between;
+    @include option(gap, 48);
+  }
+  &__history-text {
+    @include option(width, 278, 184);
+    color: #FFF;
+    @include option(font-size, 24, 16);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+  }
+  &__history-img {
+    @include option(width, 68, 54);
+    img {
+      width: 100%;
     }
-    .swiper-pagination-bullet-active-prev-prev,
-    .swiper-pagination-bullet-active-next-next {
-      transition: all 0.1s linear;
-      transform: scale(0.5);
+  }
+  &__bottom-block {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+  }
+  &__list {
+    @include option(margin-bottom, 70, 25);
+  }
+  &__item {
+    @include option(border-radius, 15);
+    @include option(height, 630, 430);
+    @include option(width, 465, 280);
+    background: white;
+    &-img {
+      @include option(padding-top, 20);
+      height: 70%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      img {
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 30%;
+      width: 100%;
+      @include option(border-bottom-right-radius, 15);
+      @include option(border-bottom-left-radius, 15);
+      background: #FEC74E;
+    }
+    &-present {
+      @include option(margin-bottom, 20);
+      color: var(--grey-day-900, #212121);
+      text-align: center;
+      @include option(font-size, 40, 25);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 116%;    
+    }
+    &-name {
+      color: var(--grey-day-900, #212121);
+      text-align: center;
+      @include option(font-size, 20, 16);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 116%; 
+    }
+  }
+  
+}
+
+@include NOT-DESKTOP() {
+  .winners {
+    &__item {
+      @include option(max-height, 530);
     }
     .swiper-pagination-bullet-active {
       opacity: 1;
       transform: scale(1);
       transition: all 0.1s linear;
+
+      &-main,
+      &-prev,
+      &-next {
+        transition: all 0.1s linear;
+        transform: scale(0.8);
+      }
+
+      &-prev-prev,
+      &-next-next {
+        transition: all 0.1s linear;
+        transform: scale(0.5);
+      }
     } 
     .button {
-      margin-bottom: 36px;
+      @include option(margin-bottom, 36);
+      align-self: flex-start;
     }
-    .winners__content {
+    &__content {
       display: grid;
       grid-template-columns: repeat(1, 100%);
       grid-template-rows: repeat(3, auto);
@@ -173,31 +159,32 @@
     .swiper-container {
       margin: 0;
     }
-    .button {
-      align-self: flex-start;
+    &__history {
+      align-items: center;
+      width: 100%;
+      order: 3;
+      justify-self: self-start;
     }
   }
-  .winners__history {
-    align-items: center;
-    width: 100%;
-    order: 3;
-    justify-self: self-start;
-  }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
-  .winners__item-present {
-    @include option(font-size, 40, 15);
-  }
-  .winners__item-name {
-    @include option(font-size, 20, 10);
-  }
-}
-
-@media (max-width: 767px) {
+@include TABLET {
   .winners {
-    .winners__item, .swiper-wrapper, .swiper-container {
-      max-width: 500px;
+    &__item {
+      &-present {
+        @include option(font-size, 40, 15);
+      }
+      &-name {
+        @include option(font-size, 20, 10);
+      }
+    }
+  }
+}
+
+@include MOBILE-AND-TABLET {
+  .winners {
+    &__item, .swiper-wrapper, .swiper-container {
+      @include option(max-width, 500);
     }
   }
 }

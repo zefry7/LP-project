@@ -1,148 +1,136 @@
 .ticket{
     overflow: hidden;
-    padding: 90px 100px 0;
+    @include padding-wrapper-block;
     background: #0F3017;
     .button {
-        margin-bottom: 40px;
-        width: 327.085px;
-        @include option(height, 78, 54);
-        border-radius: 12px;
+        @include option(margin-bottom, 40);
+        @include option(width, 327);
         background: #FFCD17;
-        color: #212121;
-        text-align: center;
-        font-family: Roboto;
-        @include option(font-size, 24, 18);
+        &:hover {
+            transition: all 0.3s linear;
+            background: #dfb313;
+        }
+    }
+    &__content {
+        display: flex;
+        @include padding-content-block;
+        @include option(border-radius, 36);
+        background: linear-gradient(288deg, #D44F40 -95%, #7701B0 105.93%);
+        position: relative;
+    }
+    &__info {
+        position: relative;
+        z-index: 5;
+    }
+    &__label {
+        @include option(width, 468, 250);
+        @include option(font-size, 30, 16);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%; 
+        background: linear-gradient(270deg, #FCFF01 30.39%, #FF9406 60.64%, #F559C8 90.45%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter:drop-shadow( -0px 4px 9px rgba(0, 0, 0, 0.50) );
+    }
+    &__title {
+        @include option(margin-bottom, 13);
+        @include option(width, 700);
+        @include option(font-size, 72, 26);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; 
+        background: linear-gradient(270deg, #FCFF01 30.39%, #FF9406 60.64%, #F559C8 90.45%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter:drop-shadow( -0px 4px 9px rgba(0, 0, 0, 0.50) );
+    }
+    &__subtitle {
+        @include option(margin-bottom, 35, 22);
+        color: #FFF;
+        @include option(width, 950, 210);
+        @include option(font-size, 36, 16.01);
         font-style: normal;
         font-weight: 700;
     }
-}
-.ticket__content {
-    display: flex;
-    @include option(padding-top, 64, 44);
-    @include option(padding-left, 120, 20);
-    @include option(padding-right, 120, 20);
-    @include option(padding-bottom, 64, 44);
-    border-radius: 36.009px;
-    background: linear-gradient(288deg, #D44F40 -95%, #7701B0 105.93%);
-    position: relative;
-}
-.ticket__info {
-    position: relative;
-    z-index: 5;
-}
-.ticket__label {
-    @include option(width, 468, 250);
-    font-family: Montserrat;
-    @include option(font-size, 30, 16);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 110%; 
-    background: linear-gradient(270deg, #FCFF01 30.39%, #FF9406 60.64%, #F559C8 90.45%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter:drop-shadow( -0px 4px 9px rgba(0, 0, 0, 0.50) );
-}
-.ticket__title {
-    margin-bottom: 13px;
-    width: 700px;
-    font-family: Montserrat;
-    @include option(font-size, 72, 26);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%; 
-    background: linear-gradient(270deg, #FCFF01 30.39%, #FF9406 60.64%, #F559C8 90.45%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter:drop-shadow( -0px 4px 9px rgba(0, 0, 0, 0.50) );
-}
-.ticket__subtitle {
-    @include option(margin-bottom, 35, 22);
-    color: #FFF;
-    font-family: Montserrat;
-    @include option(width, 950, 210);
-    @include option(font-size, 36, 16.01);
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-.ticket__list {
-    @include option(margin-bottom, 73, 33);
-    & .ticket__item:nth-child(1) {
-        &::before{
-            content: "";
-            @include option(margin-right, 45, 17);
-            display: inline-block;
-            @include option(min-width, 81, 28);
-            @include option(height, 63, 22);
-            background: url(../../../images/ticket/display/decor-1.png) center/ 100% no-repeat;
+    &__list {
+        @include option(margin-bottom, 73, 33);
+        .ticket__item:nth-child(1) {
+            &::before{
+                content: "";
+                @include option(margin-right, 45, 17);
+                display: inline-block;
+                @include option(min-width, 81, 28);
+                @include option(height, 63, 22);
+                background: url(../../../images/ticket/display/decor-1.png) center/ 100% no-repeat;
+            }
+        }
+        .ticket__item:nth-child(2) {
+            &::before{
+                content: "";
+                @include option(margin-right, 45, 17);
+                display: inline-block;
+                @include option(min-width, 79, 27);
+                @include option(height, 81, 27);
+                background: url(../../../images/ticket/display/decor-2.png) center/ 100% no-repeat;
+            }
+        }
+        .ticket__item:nth-child(3) {
+            margin-bottom: 0px;
+            &::before{
+                content: "";
+                @include option(margin-right, 45, 17);
+                display: inline-block;
+                @include option(min-width, 81, 28);
+                @include option(height, 96, 31);
+                background: url(../../../images/ticket/display/decor-3.png) center/ 100% no-repeat;
+            }
         }
     }
-    & .ticket__item:nth-child(2) {
-        &::before{
+    &__item {
+        @include option(width, 490, 250);
+        display: flex;
+        @include option(margin-bottom, 30);
+        align-items: center;
+        color: #FFF;
+        font-family: Roboto;
+        @include option(font-size, 21, 12);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; 
+    }
+    &__info-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+    &__private {
+        display: flex;
+        align-items: center;
+        color: #FFCD17;
+        font-family: Roboto;
+        @include option(font-size, 21, 12);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; 
+        text-decoration-line: underline;
+        &::before {
+            @include option(margin-right, 20, 12);
             content: "";
-            @include option(margin-right, 45, 17);
             display: inline-block;
-            @include option(min-width, 79, 27);
-            @include option(height, 81, 27);
-            background: url(../../../images/ticket/display/decor-2.png) center/ 100% no-repeat;
+            @include option(width, 30, 20);
+            @include option(height, 21, 14);
+            background: url(../../../images/ticket/display/book.png) center/ 100% no-repeat;
         }
     }
-    & .ticket__item:nth-child(3) {
-        margin-bottom: 0px;
-        &::before{
-            content: "";
-            @include option(margin-right, 45, 17);
-            display: inline-block;
-            @include option(min-width, 81, 28);
-            @include option(height, 96, 31);
-            background: url(../../../images/ticket/display/decor-3.png) center/ 100% no-repeat;
-        }
+    &__decor {
+        max-width: 80%;
+        position: absolute;
+        top: calc(50% - 39px);
+        transform: translateY(-50%);
+        @include option(right, -114);
     }
 }
-.ticket__item {
-    @include option(width, 490, 250);
-    display: flex;
-    margin-bottom: 30px;
-    align-items: center;
-    color: #FFF;
-    font-family: Roboto;
-    @include option(font-size, 21, 12);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; 
-}
-.ticket__info-bottom {
-    display: flex;
-    flex-direction: column;
-}
-.ticket__private {
-    display: flex;
-    align-items: center;
-    color: #FFCD17;
-    font-family: Roboto;
-    @include option(font-size, 21, 12);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; 
-    text-decoration-line: underline;
-    &::before {
-        @include option(margin-right, 20, 12);
-        content: "";
-        display: inline-block;
-        @include option(width, 30, 20);
-        @include option(height, 21, 14);
-        background: url(../../../images/ticket/display/book.png) center/ 100% no-repeat;
-    }
-}
-.ticket__decor {
-    max-width: 70%;
-    position: absolute;
-    top: calc(50% - 39px);
-    transform: translateY(-50%);
-    right: -114px;
-}
-
-@media (max-width: 1023px) {
+@include NOT-DESKTOP() {
     .ticket{
         padding: 0;
 
@@ -150,33 +138,33 @@
             width: 100%;
             margin-bottom: 0;
         }
-    }
-    .ticket__content {
-        display: block;
-        border-radius: 0;
-        background: linear-gradient(180deg, #300097 0%, #A21E6D 50%);
-    }
-    .ticket__info-bottom {
-        flex-direction: column-reverse;
-    }
-    .ticket__title {
-        width: 100%;
-    }
-    .ticket__decor {
-        max-width: 100%;
-        margin: 0 -20px;
-        left: calc(50% + 20px);
-        top: initial;
-        @include option(bottom, 400, 140);
-        transform: translateX(-50%);
-        width: 100%;
-        @include option(height, 243);
-        img {
-            object-position: center;
+        &__content {
+            display: block;
+            border-radius: 0;
+            background: linear-gradient(180deg, #300097 0%, #A21E6D 50%);
+        }
+        &__info-bottom {
+            flex-direction: column-reverse;
+        }
+        &__title {
             width: 100%;
         }
-    }
-    .ticket__private {
-        @include option(margin-bottom, 293);
+        &__decor {
+            max-width: 100%;
+            @include option(margin, 0 -20 0 -20);
+            left: calc(50% + 20px);
+            top: initial;
+            @include option(bottom, 400, 140);
+            transform: translateX(-50%);
+            width: 100%;
+            @include option(height, 243);
+            img {
+                object-position: center;
+                width: 100%;
+            }
+        }
+        &__private {
+            @include option(margin-bottom, 293);
+        }
     }
 }

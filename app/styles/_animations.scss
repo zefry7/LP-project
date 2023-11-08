@@ -61,6 +61,15 @@
       opacity: 1;
   }
 }
+@keyframes line-button {
+  0%{left: -100%;}
+  30% {
+      left: 120%;
+  }
+  100% {
+      left: 120%;
+  }
+}
 
 //%SHAKE {
 //  @include shake-animation(SCALE-SHAKE, .025, 1, 1.0s);

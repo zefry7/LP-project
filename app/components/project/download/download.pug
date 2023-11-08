@@ -1,10 +1,11 @@
 mixin download(content)
   section#download.download
     .download__content
-      h2.download__title!= content.title
-      ul.download__list 
-        each v in content.items
-          li.download__item-text!= v
+      .download__text-block
+        h2.download__title!= content.title
+        ul.download__list 
+          each v in content.items
+            li.download__item-text!= v
       .download__decor 
         +picture(content.decor)
     .download__buttons-row 

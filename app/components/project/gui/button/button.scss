@@ -1,3 +1,32 @@
 .button {
-  
+    @include option(width, 465, 278);
+    @include option(height, 94, 55);
+    color: #FFF;
+    text-align: center;
+    @include option(font-size, 28, 18);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 116%; 
+    @include option(border-radius, 15);
+    background-color: #E12D43;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s linear;
+    &::before {
+        content: "";
+        background-color: white;
+        @include option(top, -30);
+        @include option(width, 10);
+        height: 200%;
+        position: absolute;
+        transform: rotate(40deg);
+        animation: line-button 5s linear 2s infinite;
+        animation-fill-mode: backwards;
+        filter: blur(5px);
+    }
+    &:hover {
+        transition: all 0.3s linear;
+        background-color: #b12434;
+    }
 }
+

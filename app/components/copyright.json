@@ -939,6 +939,7 @@
     "button": {
       "text": "Купить билеты"
     },
+    "road": "../images/travel/display/road.svg",
     "list": [
       {
         "title": "Вояж к морю 🌊",

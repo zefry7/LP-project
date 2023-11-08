@@ -116,3 +116,15 @@
   }
 }
 
+@mixin padding-content-block() {
+  @include option(padding, 64 120 62 120, 44 20 44 20);
+}
+@mixin padding-content-no-block() {
+  
+}
+@mixin padding-wrapper-block() {
+  @include option(padding, 90 100 0 100, 0 0 0 0)
+}
+@mixin padding-wrapper-no-block() {
+  @include option(padding, 160 160 145 160, 55 20 55 20);
+}

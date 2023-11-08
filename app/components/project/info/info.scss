@@ -1,130 +1,124 @@
 .info {
   overflow: hidden;
-  @include option(padding-left, 160, 20);
-  @include option(padding-right, 160, 20);
-  @include option(padding-top, 165, 48);
-  @include option(padding-bottom, 165, 55);
+  @include padding-wrapper-no-block;
   background: #0F3017;
 
   .button {
-    margin-bottom: 50px;
+    @include option(margin-bottom, 50);
     align-self: center;
-    position: relative;
     z-index: 2;
   }
-}
-.info__content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  &::after {
-    content: "";
-    position: absolute;
-    left: -229px;
-    bottom: -260px;
-    display: inline-block;
-    @include option(width, 927, 284);
-    @include option(height, 684, 346);
-    opacity: 0.05;
-    background: url(../../../images/download/display/decor.svg) center/ 100% no-repeat;
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &::after {
+      content: "";
+      position: absolute;
+      @include option(left, -229);
+      @include option(bottom, -260);
+      display: inline-block;
+      @include option(width, 927, 284);
+      @include option(height, 684, 346);
+      opacity: 0.05;
+      background: url(../../../images/download/display/decor.svg) center/ 100% no-repeat;
+    }
   }
-}
-.info__title{
-  position: relative;
-  z-index: 2;
-  @include option(margin-bottom, 112, 30);
-  @include option(width, 1000, 289);
-  color: #FFF;
-  font-family: Montserrat;
-  @include option(font-size, 84, 26);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-}
-.info__price {
-  position: relative;
-  z-index: 2;
-  @include option(margin-bottom, 183, 36);
-  color: #FEC74E;
-  font-family: Montserrat;
-  @include option(font-size, 74, 26);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  position: relative;
-  &::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    @include option(width, 764, 288);
-    @include option(height, 136, 63);
-    @include option(top, -15);
-    @include option(left, -32, -8);
-    background: url(../../../images/info/display/price-border.svg) center/ 100% no-repeat;
-  }  
-  &::after {
-    content: "ДЖЕКПОТ";
-    position: absolute;
-    @include option(top, -40, -18);
-    @include option(left, 60, 22);
-    display: inline-block;
-    color: #FEC74E;
-    font-family: Montserrat;
-    @include option(font-size, 32, 13.4);
+  &__title{
+    position: relative;
+    z-index: 2;
+    @include option(margin-bottom, 112, 30);
+    @include option(width, 1000, 289);
+    color: #FFF;
+    @include option(font-size, 84, 26);
     font-style: normal;
     font-weight: 700;
-    line-height: 128%; 
-    letter-spacing: 1.097px;
-    text-transform: uppercase;
+    line-height: 120%;
   }
-}
-.info__decor {
-  @include option(width, 749, 397);
-  @include option(height, 1003, 344);
-  position: absolute;
-  z-index: 0;
-  @include option(top, -100, -50);
-  @include option(right, -150, -100);
-  img {
+  &__price {
     position: relative;
-    z-index: 4;
-    max-width: 100%;
-    height: 100%;
+    z-index: 2;
+    @include option(margin-bottom, 183, 36);
+    color: #FEC74E;
+    @include option(font-size, 74, 26);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    position: relative;
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      @include option(width, 764, 288);
+      @include option(height, 136, 63);
+      @include option(top, -15);
+      @include option(left, -32, -8);
+      background: url(../../../images/info/display/price-border.svg) center/ 100% no-repeat;
+    }  
+    &::after {
+      content: "ДЖЕКПОТ";
+      position: absolute;
+      @include option(top, -40, -18);
+      @include option(left, 60, 22);
+      display: inline-block;
+      color: #FEC74E;
+      @include option(font-size, 32, 13.4);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 128%; 
+      text-transform: uppercase;
+    }
   }
-  &::before {
-    content: "";
+  &__decor {
+    @include option(width, 749, 397);
+    @include option(height, 1003, 344);
     position: absolute;
-    top: 150px;
-    right: -220px;
-    display: inline-block;
-    @include option(width, 1000, 200);
-    @include option(height, 1000, 200);
-    border-radius: 577px;
-    filter: blur(152px);
-    background: linear-gradient(175deg, #FFF -72.92%, rgba(255, 255, 255, 0.00) 83.07%);
+    z-index: 0;
+    @include option(top, -100, -50);
+    @include option(right, -150, -100);
+    img {
+      position: relative;
+      z-index: 4;
+      max-width: 100%;
+      height: 100%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      @include option(top, -150);
+      @include option(right, -220);
+      display: inline-block;
+      @include option(width, 1000, 200);
+      @include option(height, 1000, 200);
+      @include option(border-radius, 577);
+      filter: blur(152px);
+      background: linear-gradient(175deg, #FFF -72.92%, rgba(255, 255, 255, 0.00) 83.07%);
+    }
   }
 }
 
 @media (max-width: 1023px) {
-  .info__price {
-    text-align: center;
-  }
-  .info__decor {
-    position: static;
-
-    &::before {
-      top: initial;
-      bottom: 100px;
-      right: 50%;
-      transform: translateX(50%);
-      filter: blur(42px);
+  .info {
+    &__price {
+      text-align: center;
     }
-  }
-  .info__content {
-    &::after {
-      transform: rotateZ(180deg);
-      @include option(left, -229, -110);
-      @include option(bottom, -260, 60);
+    &__decor {
+      position: static;
+  
+      &::before {
+        top: initial;
+        @include option(bottom, 100);
+        right: 50%;
+        transform: translateX(50%);
+        filter: blur(42px);
+      }
+    }
+    &__content {
+      &::after {
+        transform: rotateZ(180deg);
+        @include option(left, -229, -110);
+        @include option(bottom, -260, 60);
+      }
     }
   }
 }

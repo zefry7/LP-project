@@ -49,25 +49,37 @@ const PRESETS = {
       el: ".winners__pagination",
       type: "bullets",
       clickable: true,
-      dynamicBullets: true,
-      dynamicMainBullets: 5
     },
     breakpoints: {
       320: {
         slidesPerView: 1,
         spaceBetween: 20,
+        pagination: { 
+          dynamicBullets: true,
+          dynamicMainBullets: 5
+        }
       },
       768: {
-        slidesPerView: 2,
-        spaceBetween: 20
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: { 
+          dynamicBullets: true,
+          dynamicMainBullets: 5
+        }
       },
       1024: {
         slidesPerView: 3,
         spaceBetween: 20,
+        pagination: { 
+          dynamicBullets: false,
+        }
       },
       1280: {
         slidesPerView: 3.5,
-        spaceBetween: 20
+        spaceBetween: 20,
+        pagination: { 
+          dynamicBullets: false,
+        }
       }
     }
   },

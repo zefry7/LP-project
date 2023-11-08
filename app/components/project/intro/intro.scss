@@ -6,94 +6,76 @@
 
     .swiper-slide {
         @include option(height, 1080, 600);
-    }
-    .swiper-slide-active {
-        .intro__name {
-            animation: opac-text 0.3s linear 0.5s;
-            animation-fill-mode: forwards;
+
+        &-active {
+            .intro__name {
+                animation: opac-text 0.3s linear 0.5s;
+                animation-fill-mode: forwards;
+            }
         }
     }
-    .swiper-pagination {
+
+    &__swiper-img {
+        height: 100%;
+    }
+    &__bc {
         position: absolute;
-        @include option(bottom, 175, 31);
-        right: 0;
+        z-index: 0;
+    
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__main {
+        @include option(margin-top, 190, 90);
         display: flex;
-        justify-content: center;
-        @include option(gap, 30, 15);
-        width: 40%;
+        @include option(padding-left, 160, 20);
     }
-    .swiper-pagination-bullet {
-        display: inline-block;
-        height: 10px;
-        width: 10px;
-        border-radius: 10px;
-        opacity: 0.7;
-        background: #F7F7F7;
-    }
-    .intro__swiper-img {
-        height: 100%;
-    }
-}
-.intro__bc {
-    position: absolute;
-    z-index: 0;
-
-    img {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-    }
-}
-.intro__main {
-    @include option(margin-top, 190, 90);
-    display: flex;
-    @include option(padding-left, 160, 20);
-}
-.intro__decor {
-    position: absolute;
-    top: 0;
-    z-index: 0;
-    @include option(height, 1147, 371);
-    width: 60%;
-    background: rgba(0, 0, 0, 0.10);
-    backdrop-filter: blur(15px);
-    overflow: hidden;
-    &::before {
-        content: "";
-        width: 1205px;
-        height: 948px;
+    &__decor {
         position: absolute;
-        right: 69px;
-        bottom: 0;
-        display: inline-block;
-        border-radius: 1205px;
-        background: rgba(255, 255, 255, 0.76);
-        filter: blur(197px);
+        top: 0;
+        z-index: 0;
+        @include option(height, 1147, 371);
+        width: 60%;
+        background: rgba(0, 0, 0, 0.10);
+        backdrop-filter: blur(30px);
+        overflow: hidden;
+        &::before {
+            content: "";
+            @include option(height, 948, 371);
+            @include option(width, 1205, 320);
+            position: absolute;
+            @include option(right, 69);
+            bottom: 0;
+            display: inline-block;
+            @include option(border-radius, 1205, 320);
+            background: rgba(255, 255, 255, 0.76);
+            filter: blur(175px);
+        }
     }
-}
-.intro__left-block {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 5;
-    flex: 1 0 50%;
-
-    .intro__title {
+    &__left-block {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 5;
+        flex: 1 0 50%;
+    }
+    &__title {
         @include option(margin-bottom, 28, 35);
         @include option(height, 288, 84);
         @include option(width, 800, 280);
         color:  #212121;
-        font-family: Montserrat;
         @include option(font-size, 84, 28);
         font-style: normal;
         font-weight: 700;
         line-height: 100%; 
     }
-    .intro__price {
+    &__price {
         @include option(margin-bottom, 87, 30);
         width: max-content;
         color: #350296;
-        font-family: Montserrat;
         @include option(font-size, 74, 26);
         font-style: normal;
         font-weight: 700;
@@ -116,7 +98,6 @@
             @include option(left, 60, 15);
             display: inline-block;
             color: #350296;
-            font-family: Montserrat;
             @include option(font-size, 32, 13.4);
             font-style: normal;
             font-weight: 700;
@@ -124,51 +105,35 @@
             text-transform: uppercase;
         }
     }
-    .intro__tv-row {
+    &__tv-row {
         @include option(left, 94, 20);
-        margin-bottom: 94px;
+        @include option(margin-bottom, 94);
         height: max-content;
         display: flex;
         align-items: center;
     }
-    .intro__tv-img {
-        margin-right: 28px;
-        width: 67px;
-        height: 67px;
+    &__tv-img {
+        @include option(margin-right, 28);
+        @include option(width, 67);
+        @include option(height, 67);
     }
-    .intro__tv-text {
-        width: 270px;
+    &__tv-text {
+        @include option(width, 270);
         color:  #212121;
-        font-family: Montserrat;
-        font-size: 16px;
+        @include option(font-size, 16);
         font-style: normal;
         font-weight: 500;
-        line-height: 22px; 
+        line-height: 140%; 
     }
-    .intro__button {
-        width: 465px;
-        height: 94px;
-        color: #FFF;
-        text-align: center;
-        font-family: Montserrat;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 116%; 
-        border-radius: 15px;
-        background: #E12D43;
+    &__right-block {
+        @include option(padding, 0 67 0 67, 0 0 0 0);
+        flex: 1 0 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
     }
-}
-
-.intro__right-block {
-    padding: 0 67px;
-    flex: 1 0 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-
-    .intro__img-label {
+    &__img-label {
         @include option(width, 210, 98);
         @include option(height, 210, 98);
         border-radius: 50%;
@@ -189,7 +154,7 @@
             @include option(width, 180, 84);
             @include option(height, 120, 56);
             position: absolute;
-            right: -5px;
+            @include option(right, -5);
             transform: scale(1.1);
             background: url("../../../images/intro/display/label-text.png") center/ 100% 100% no-repeat;
         }
@@ -204,65 +169,43 @@
             background: url("../../../images/intro/display/label-text-2.png") center/ 100% no-repeat;
         }
     }
-}
-
-.intro__name {
-    opacity: 0;
-    text-align: center;
-    width: 40%;
-    position: absolute;
-    @include option(bottom, 310, 60);
-    right: 0;
-    font-family: Montserrat;
-    @include option(font-size, 100, 36);
-    font-style: normal;
-    font-weight: 800;
-    line-height: 100%; 
-    background: linear-gradient(181deg, #FFF 20%, rgba(255, 255, 255, 0.00) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-@media (min-width: 1024px) {
-    .intro {
-        .swiper-pagination-bullet-active {
-            opacity: 1;
-            animation: anim-width-pb 5.5s linear;
-            animation-fill-mode: forwards;
-        } 
+    &__name {
+        opacity: 0;
+        text-align: center;
+        width: 40%;
+        position: absolute;
+        @include option(bottom, 310, 60);
+        right: 0;
+        @include option(font-size, 100, 36);
+        font-style: normal;
+        font-weight: 800;
+        line-height: 100%; 
+        background: linear-gradient(181deg, #FFF 20%, rgba(255, 255, 255, 0.00) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
-@media (max-width: 1023px) {
+@include NOT-DESKTOP() {
     .intro {
-        .swiper-pagination {
-            width: 100%;
-        }
-        .swiper-pagination-bullet-active {
-            opacity: 1;
-            transform: scale(1.5);
-        } 
-        .intro__main {
+        &__main {
             display: flex;
             flex-direction: column;
             @include option(padding-right, 160, 20);
         }
-    }
-    .intro__left-block {
-        .intro__tv-row {
+        &__tv-row {
             display: none;
         }
-    }
-    .intro__decor {
-        width: 100%;
-    }
-    .intro__name {
-        width: 100%;
-    }
-    .intro__right-block {
-        padding: 0;
-        @include option(padding-top, 40, 20);
+        &__decor {
+            width: 100%;
+        }
+        &__name {
+            width: 100%;
+        }
+        &__right-block {
+            @include option(padding-top, 40, 20);
+        }
     }
 }
 
