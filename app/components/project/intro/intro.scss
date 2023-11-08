@@ -41,18 +41,17 @@
         width: 60%;
         background: rgba(0, 0, 0, 0.10);
         backdrop-filter: blur(30px);
-        overflow: hidden;
         &::before {
             content: "";
-            @include option(height, 948, 371);
-            @include option(width, 1205, 320);
+            height: 100%;
+            width: 100%;
             position: absolute;
             @include option(right, 69);
             bottom: 0;
             display: inline-block;
-            @include option(border-radius, 1205, 320);
-            background: rgba(255, 255, 255, 0.76);
-            filter: blur(175px);
+            // border-radius: 1205px;
+            background-color: rgba(255, 255, 255, 0.76);
+            filter: blur(197px);
         }
     }
     &__left-block {

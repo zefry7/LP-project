@@ -8,8 +8,8 @@
   .swiper-wrapper {
     @include option(height, 750, 430);
     @include option(width, 4400);
-    background: url("../../../images/travel/display/road.svg") left no-repeat;
-    background-size: 90% 85%;
+    background: url("../../../images/travel/display/road.svg") left center no-repeat;
+    background-size: 90% 80%;
 
     .carousel__item:nth-child(1) {
       position: relative;

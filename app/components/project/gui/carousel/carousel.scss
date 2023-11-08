@@ -35,6 +35,8 @@
 }
 
 @include NOT-DESKTOP() {
+  .onlineBuy,
+  .travel,
   .intro {
     .swiper-pagination {
         width: 100%;
