@@ -1,7 +1,9 @@
 .download {
   background: #0F3017;
   &__content {
-    @include padding-wrapper-no-block;
+    @include wrapper(1720, 2);
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
     position: relative;
   }
   &__title {
@@ -76,7 +78,7 @@
   &__decor  {
     position: absolute;
     @include option(top, 44);
-    @include option(right, 162, 20);
+    right: 0;
     @include option(height, 979, 420);
     @include option(width, 625, 268);
     &::before {

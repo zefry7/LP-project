@@ -1,7 +1,7 @@
 .ticket{
     overflow: hidden;
-    @include padding-wrapper-block;
     background: #0F3017;
+    @include option(padding-top, 90, 0);
     .button {
         @include option(margin-bottom, 40);
         @include option(width, 327);
@@ -14,7 +14,7 @@
     }
     &__content {
         display: flex;
-        @include padding-content-block;
+        @include wrapper(1620, 2);
         @include option(border-radius, 36);
         background: linear-gradient(288deg, #D44F40 -95%, #7701B0 105.93%);
         position: relative;

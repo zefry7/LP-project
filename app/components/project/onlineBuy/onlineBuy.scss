@@ -1,5 +1,4 @@
 .onlineBuy {
-    @include option(padding, 0 100 0 100, 0 0 0 0);
     background: #0F3017;
     .swiper-container {
         display: flex;
@@ -21,7 +20,7 @@
         z-index: 5;
     }
     &__content {
-        @include padding-content-block;
+        @include wrapper(1720, 2);
         display: grid;
         grid-template-columns: 70% 30%;
         grid-template-rows: repeat(2, auto);

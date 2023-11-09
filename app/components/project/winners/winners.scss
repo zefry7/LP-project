@@ -1,5 +1,4 @@
 .winners {
-  @include padding-wrapper-no-block;
   background: #0F3017;
   overflow: hidden;
   .swiper-container {
@@ -30,8 +29,9 @@
     display: flex;
   }
   &__content {
+    @include wrapper(1620, 2);
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: 60% 40%;
     grid-template-rows: repeat(2, auto);
   }
   &__row-title  {

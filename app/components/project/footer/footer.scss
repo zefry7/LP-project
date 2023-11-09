@@ -14,7 +14,9 @@
     }
   }
   &__content {
-    @include option(padding, 42 208 80 208, 30 25 56 25);
+    @include wrapper(1720, 2);
+    @include option(padding-top, 42, 30);
+    @include option(padding-top, 80, 25);
     display: flex;
     justify-content: space-between;
     @include option(gap, 100, 10);

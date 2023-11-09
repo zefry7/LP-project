@@ -1,5 +1,5 @@
 .join {
-  @include padding-wrapper-no-block;
+  overflow: hidden;
   background: #0F3017;
   .swiper-slide {
     display: flex;
@@ -7,7 +7,6 @@
   }
   .swiper-container {
     overflow: visible;
-    overflow-x: hidden;
   }  
   .swiper-pagination-bullet-active {
     @include option(height, 120);
@@ -16,13 +15,19 @@
   }
   .carousel__item {
     height: auto;
+    opacity: 0;
+    transition: all 0.1s linear;
   }
-
+  .carousel__item.swiper-slide-active {
+    transition: all 0.2s linear;
+    opacity: 1;
+  }
   .button {
     align-self: center;
   }
 
   &__content {
+    @include wrapper(1760, 2);
     display: flex;
     flex-direction: column;
   }

@@ -12,6 +12,10 @@
     overflow: hidden;
 }
 
+.wrapper {
+    margin: 0 auto;
+}
+
 @include NOT-DESKTOP() {
     .body-lock {
         overflow: hidden;

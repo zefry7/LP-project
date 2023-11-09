@@ -1,5 +1,4 @@
 .travel {
-  @include option(padding, 0 100 0 100);
   background: #0F3017;
   position: relative;
   .carousel__item {
@@ -144,7 +143,7 @@
     width: max-content;
   }
   &__content {
-    @include padding-content-block;
+    @include wrapper(1720, 2);
     display: flex;
     flex-direction: column;
     @include option(border-radius, 15);

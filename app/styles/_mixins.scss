@@ -119,12 +119,24 @@
 @mixin padding-content-block() {
   @include option(padding, 64 120 62 120, 44 20 44 20);
 }
-@mixin padding-content-no-block() {
-  
-}
 @mixin padding-wrapper-block() {
   @include option(padding, 90 100 0 100, 0 0 0 0)
 }
 @mixin padding-wrapper-no-block() {
   @include option(padding, 160 160 145 160, 55 20 55 20);
+}
+
+@mixin wrapper($mw, $num) {
+  max-width: #{$mw + px};
+
+  @include option(padding, 160 120 160 120, 44 20 44 20);
+  @include option(margin, 0 160 0 160, 0 0 0 0);
+
+  @media (min-width: $DESIGN-W) {
+    margin: 0 auto;
+    @if $num == 1 {
+      @include option(margin-top, 160);
+      @include option(margin-bottom, 145);
+    }
+  }
 }
