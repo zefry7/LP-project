@@ -1,8 +1,10 @@
 .winners {
   background: #0F3017;
   overflow: hidden;
+  @include option(padding, 168 157 81 157, 0 0 0 0);
   .swiper-container {
     overflow: visible;
+    margin: 0;
     @include option(width, 1720, 280);
   }
   .swiper-slide {
@@ -29,7 +31,6 @@
     display: flex;
   }
   &__content {
-    @include wrapper(1620, 2);
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: repeat(2, auto);
@@ -48,6 +49,8 @@
     line-height: 115.5%; 
   }
   &__history {
+    @include option(margin-bottom, 85, 30);
+    align-self: flex-end;
     justify-self: end;
     display: flex;
     justify-content: space-between;
@@ -80,16 +83,17 @@
     @include option(border-radius, 15);
     @include option(height, 630, 430);
     @include option(width, 465, 280);
+    max-width: 465px;
     background: white;
     &-img {
-      @include option(padding-top, 20);
-      height: 70%;
+      height: 72%;
       overflow: hidden;
       display: flex;
       justify-content: center;
       img {
         max-width: 100%;
-        height: 100%;
+        width: 100%;
+        height: auto;
       }
     }
     &-text {
@@ -97,20 +101,20 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 30%;
+      height: 28%;
       width: 100%;
       @include option(border-bottom-right-radius, 15);
       @include option(border-bottom-left-radius, 15);
       background: #FEC74E;
     }
     &-present {
-      @include option(margin-bottom, 20);
+      @include option(margin-bottom, 32);
       color: var(--grey-day-900, #212121);
       text-align: center;
       @include option(font-size, 40, 25);
       font-style: normal;
       font-weight: 700;
-      line-height: 116%;    
+      line-height: 45%;    
     }
     &-name {
       color: var(--grey-day-900, #212121);

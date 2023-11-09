@@ -14,6 +14,9 @@
             }
         }
     }
+    .swiper-pagination {
+        width: 45%;
+    }
 
     &__swiper-img {
         height: 100%;
@@ -38,7 +41,7 @@
         top: 0;
         z-index: 0;
         @include option(height, 1147, 371);
-        width: 60%;
+        width: 56.5%;
         background: rgba(0, 0, 0, 0.10);
         backdrop-filter: blur(30px);
         &::before {
@@ -62,9 +65,9 @@
         flex: 1 0 50%;
     }
     &__title {
-        @include option(margin-bottom, 28, 35);
+        @include option(margin-bottom, 48, 35);
         @include option(height, 288, 84);
-        @include option(width, 800, 280);
+        @include option(width, 840, 280);
         color:  #212121;
         @include option(font-size, 84, 28);
         font-style: normal;
@@ -171,11 +174,11 @@
     &__name {
         opacity: 0;
         text-align: center;
-        width: 40%;
+        width: 44%;
         position: absolute;
-        @include option(bottom, 310, 60);
+        @include option(bottom, 300, 60);
         right: 0;
-        @include option(font-size, 100, 36);
+        @include option(font-size, 114, 36);
         font-style: normal;
         font-weight: 800;
         line-height: 100%; 

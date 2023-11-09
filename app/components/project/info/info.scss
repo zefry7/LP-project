@@ -1,14 +1,12 @@
 .info {
   overflow: hidden;
   background: #0F3017;
-
+  @include option(padding, 160 160 165 160, 0 0 0 0);
   .button {
-    @include option(margin-bottom, 50);
     align-self: center;
     z-index: 2;
   }
   &__content {
-    @include wrapper(1720, 2);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -27,7 +25,7 @@
   &__title{
     position: relative;
     z-index: 2;
-    @include option(margin-bottom, 112, 30);
+    @include option(margin-bottom, 105, 30);
     @include option(width, 1000, 289);
     color: #FFF;
     @include option(font-size, 84, 26);
@@ -51,15 +49,15 @@
       position: absolute;
       @include option(width, 764, 288);
       @include option(height, 136, 63);
-      @include option(top, -15);
-      @include option(left, -32, -8);
-      background: url(../../../images/info/display/price-border.svg) center/ 100% no-repeat;
+      @include option(top, -19);
+      @include option(left, -55, -8);
+      background: url(../../../images/info/display/price-border.svg) center/ 100% 100% no-repeat;
     }  
     &::after {
       content: "ДЖЕКПОТ";
       position: absolute;
       @include option(top, -40, -18);
-      @include option(left, 60, 22);
+      @include option(left, 55, 22);
       display: inline-block;
       color: #FEC74E;
       @include option(font-size, 32, 13.4);
@@ -74,6 +72,7 @@
     @include option(height, 1003, 344);
     position: absolute;
     z-index: 0;
+    @include option(top, -120);
     @include option(right, -150, -100);
     img {
       position: relative;

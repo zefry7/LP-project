@@ -1,8 +1,12 @@
 .travel {
+  @include option(padding, 0 98 0 101, 0 0 0 0);
   background: #0F3017;
   position: relative;
   .carousel__item {
     @include option(width, 550);
+  }
+  &__pagination {
+    margin-top: -50px;
   }
   .swiper-wrapper {
     @include option(height, 750, 430);
@@ -143,7 +147,7 @@
     width: max-content;
   }
   &__content {
-    @include wrapper(1720, 2);
+    @include option(padding, 81 67 125 67, 0 0 0 0);
     display: flex;
     flex-direction: column;
     @include option(border-radius, 15);

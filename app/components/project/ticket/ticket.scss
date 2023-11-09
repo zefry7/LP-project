@@ -1,10 +1,13 @@
 .ticket{
     overflow: hidden;
     background: #0F3017;
-    @include option(padding-top, 90, 0);
+    @include option(padding, 90 138 0 165, 0 0 0 0);
     .button {
         @include option(margin-bottom, 40);
         @include option(width, 327);
+        @include option(height, 78);
+        @include option(font-size, 24);
+        font-family: Roboto;
         background: #FFCD17;
         color: black;
         &:hover {
@@ -13,8 +16,8 @@
         }
     }
     &__content {
+        @include option(padding, 64 138 64 120, 0 0 0 0);
         display: flex;
-        @include wrapper(1620, 2);
         @include option(border-radius, 36);
         background: linear-gradient(288deg, #D44F40 -95%, #7701B0 105.93%);
         position: relative;
@@ -32,10 +35,10 @@
         background: linear-gradient(270deg, #FCFF01 30.39%, #FF9406 60.64%, #F559C8 90.45%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        filter:drop-shadow( -0px 4px 9px rgba(0, 0, 0, 0.50) );
+        filter:drop-shadow( -0px 4px 4px rgba(0, 0, 0, 0.5) );
     }
     &__title {
-        @include option(margin-bottom, 13);
+        @include option(margin-bottom, 7);
         @include option(width, 700);
         @include option(font-size, 72, 26);
         font-style: normal;
@@ -44,7 +47,7 @@
         background: linear-gradient(270deg, #FCFF01 30.39%, #FF9406 60.64%, #F559C8 90.45%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        filter:drop-shadow( -0px 4px 9px rgba(0, 0, 0, 0.50) );
+        filter:drop-shadow( -0px 4px 4px rgba(0, 0, 0, 0.5) );
     }
     &__subtitle {
         @include option(margin-bottom, 35, 22);
@@ -80,10 +83,10 @@
             margin-bottom: 0px;
             &::before{
                 content: "";
-                @include option(margin-right, 45, 17);
+                @include option(margin-right, 38, 17);
                 display: inline-block;
-                @include option(min-width, 81, 28);
-                @include option(height, 96, 31);
+                @include option(min-width, 90, 28);
+                @include option(height, 115, 31);
                 background: url(../../../images/ticket/display/decor-3.png) center/ 100% no-repeat;
             }
         }
@@ -91,7 +94,7 @@
     &__item {
         @include option(width, 490, 250);
         display: flex;
-        @include option(margin-bottom, 30);
+        @include option(margin-bottom, 25);
         align-items: center;
         color: #FFF;
         font-family: Roboto;

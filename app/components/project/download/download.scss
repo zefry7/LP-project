@@ -1,7 +1,7 @@
 .download {
   background: #0F3017;
   &__content {
-    @include wrapper(1720, 2);
+    @include option(padding, 163 116 0 162, 0 0 0 0);
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     position: relative;
@@ -16,7 +16,7 @@
     line-height: 115.5%; 
   }
   &__list {
-    @include option(margin-bottom, 165, 33);
+    @include option(margin-bottom, 185, 33);
     .download__item-text:nth-child(1) {
       &::before {
         background: url("../../../images/download/display/line-1.svg") center/ 80% no-repeat;
@@ -51,6 +51,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
+    letter-spacing: -2px;
     &::before {
       content: "";
       @include option(margin-right, 70, 22);
@@ -78,7 +79,7 @@
   &__decor  {
     position: absolute;
     @include option(top, 44);
-    right: 0;
+    @include option(right, 116, 0);
     @include option(height, 979, 420);
     @include option(width, 625, 268);
     &::before {

@@ -6,7 +6,11 @@ mixin intro(content)
         .intro__decor
         .intro__main 
             .intro__left-block
-                h2.intro__title!=content.main.title
+                h2.intro__title!= content.main.title.start
+                    |
+                    br
+                    |
+                    !=content.main.title.end
                 p.intro__price!=content.main.price
                 .intro__tv-row 
                     .intro__tv-img

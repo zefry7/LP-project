@@ -127,7 +127,7 @@
 }
 
 @mixin wrapper($mw, $num) {
-  max-width: #{$mw + px};
+  @include option(max-width, $mw);
 
   @include option(padding, 160 120 160 120, 44 20 44 20);
   @include option(margin, 0 160 0 160, 0 0 0 0);

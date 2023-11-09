@@ -1,4 +1,5 @@
 .join {
+  @include option(padding, 157 193 145 162, 0 0 0 0);
   overflow: hidden;
   background: #0F3017;
   .swiper-slide {
@@ -23,16 +24,16 @@
     opacity: 1;
   }
   .button {
+    @include option(margin-top, -60);
     align-self: center;
   }
 
   &__content {
-    @include wrapper(1760, 2);
     display: flex;
     flex-direction: column;
   }
   &__title {
-    @include option(margin-bottom, 100, 48);
+    @include option(margin-bottom, 104, 48);
     color:  #FFF;
     @include option(font-size, 74, 26);
     font-style: normal;
@@ -48,7 +49,7 @@
     }
   }
   &__info {
-    @include option(padding, 0 160 43 160, 0 0 43 0);
+    @include option(padding, 0 130 43 160, 0 0 43 0);
   }
   &__page-label {
     @include option(margin-bottom, 19, 15);
@@ -57,6 +58,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 130%; 
+    letter-spacing: -2px;
   }
   &__name {
     @include option(margin-bottom, 32, 15);
@@ -65,13 +67,14 @@
     font-style: normal;
     font-weight: 500;
     line-height: 130%; 
+    letter-spacing: -2px;
   }
   &__text {
     color: #FFF;
     @include option(font-size, 20, 18);
     font-style: normal;
     font-weight: 400;
-    line-height: 140%;
+    line-height: 130%;
   }
   li.join__text {
     @include option(margin-left, 20);
@@ -82,7 +85,7 @@
     }
   }
   &__pagination {
-    @include option(padding, 0 28 0 28, 0 0 0 0);
+    @include option(padding, 0 0 0 11, 0 0 0 0);
     @include option(margin-bottom, 116, 30);
     height: 100%;
     width: 100%;
@@ -92,8 +95,8 @@
   
     .swiper-pagination-bullet {
       display: inline-block;
-      @include option(height, 88, 60);
-      @include option(width, 88, 60);
+      @include option(height, 87, 60);
+      @include option(width, 87, 60);
       @include option(max-width, 88, 60);
       border: solid#E7C6B6;
       @include option(border-width, 3);
@@ -106,7 +109,7 @@
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        @include option(margin-left, 120, 65);
+        @include option(margin-left, 150, 65);
         content: "";
         display: inline-block;
         @include option(width, 305, 77);
@@ -115,11 +118,13 @@
       }
     }
     .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active {
-      transform: scale(1.2);
+      @include option(height, 119, 60);
+      @include option(width, 119, 60);
+      @include option(max-width, 119, 60);
       background: url(../../../images/join/display/icon-active-1.svg) center/ 50% no-repeat, linear-gradient(#E7C6B6, #E7C6B6); 
       &::after {
-        transform: translateY(-50%) scale(0.8);
-        @include option(margin-left, 100, 63);
+        transform: translateY(-50%);
+        @include option(margin-left, 150, 63);
       }
     }
     .swiper-pagination-bullet:nth-child(2) {
@@ -137,10 +142,12 @@
       }
     }
     .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
-      transform: scale(1.2);
+      @include option(height, 119, 60);
+      @include option(width, 119, 60);
+      @include option(max-width, 119, 60);
       background: url(../../../images/join/display/icon-active-2.svg) center/ 60% no-repeat, linear-gradient(#E7C6B6, #E7C6B6); 
       &::after {
-        transform: translateY(-50%) scale(0.8);
+        transform: translateY(-50%);
         @include option(margin-left, 100, 63);
       }
     }
@@ -150,7 +157,7 @@
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        @include option(margin-left, 120, 65);
+        @include option(margin-left, 130, 65);
         content: "";
         display: inline-block;
         @include option(width, 305, 77);
@@ -159,18 +166,22 @@
       }
     }
     .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
-      transform: scale(1.2);
+      @include option(height, 119, 60);
+      @include option(width, 119, 60);
+      @include option(max-width, 119, 60);
       background: url(../../../images/join/display/icon-active-3.svg) center/ 80% no-repeat, linear-gradient(#E7C6B6, #E7C6B6); 
       &::after {
-        transform: translateY(-50%) scale(0.8);
-        @include option(margin-left, 100, 63);
+        transform: translateY(-50%);
+        @include option(margin-left, 150, 63);
       }
     }
     .swiper-pagination-bullet:nth-child(4) {
       background: url(../../../images/join/display/icon-4.svg) center/ 60% no-repeat;
     }
     .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet-active {
-      transform: scale(1.2);
+      @include option(height, 119, 60);
+      @include option(width, 119, 60);
+      @include option(max-width, 119, 60);
       background: url(../../../images/join/display/icon-active-4.svg) center/ 60% no-repeat, linear-gradient(#E7C6B6, #E7C6B6); 
     }
   }

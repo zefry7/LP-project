@@ -102,8 +102,7 @@ const PRESETS = {
       },
       1024: {
         enabled: false,
-        slidesPerView: 4,
-        spaceBetween: 20,
+        slidesPerView: "auto",
       },
     }
   }
