@@ -98,5 +98,7 @@
     "normalize.css": "latest",
     "swiper": "^6.8.4",
     "tingle.js": "^0.13.2"
-  }
+  },
+  "main": ".eslintrc.js",
+  "license": "ISC"
 }

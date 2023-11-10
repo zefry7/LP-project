@@ -35,6 +35,7 @@ const PRESETS = {
     },
   },
   carouselJoin: {
+    slidesPerView: "auto",
     pagination: {
       el: ".join__pagination",
       type: "bullets",
@@ -53,7 +54,7 @@ const PRESETS = {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 20,
+        spaceBetween: 30,
         pagination: { 
           dynamicBullets: true,
           dynamicMainBullets: 5
@@ -98,7 +99,6 @@ const PRESETS = {
       320: {
         enabled: true,
         slidesPerView: 1,
-        spaceBetween: 48,
       },
       1024: {
         enabled: false,

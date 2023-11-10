@@ -1,13 +1,13 @@
 .info {
   overflow: hidden;
   background: #0F3017;
-  @include option(padding, 160 160 165 160, 0 0 0 0);
+  @include option(padding, 160 160 165 160, 48 20 52 20);
   .button {
     align-self: center;
     z-index: 2;
   }
   &__content {
-    position: relative;
+    @include wrapper(1724);
     display: flex;
     flex-direction: column;
     &::after {
@@ -25,7 +25,7 @@
   &__title{
     position: relative;
     z-index: 2;
-    @include option(margin-bottom, 105, 30);
+    @include option(margin-bottom, 105, 40);
     @include option(width, 1000, 289);
     color: #FFF;
     @include option(font-size, 84, 26);
@@ -48,9 +48,9 @@
       display: inline-block;
       position: absolute;
       @include option(width, 764, 288);
-      @include option(height, 136, 63);
-      @include option(top, -19);
-      @include option(left, -55, -8);
+      @include option(height, 136, 50);
+      @include option(top, -19, -7);
+      @include option(left, -55, -16);
       background: url(../../../images/info/display/price-border.svg) center/ 100% 100% no-repeat;
     }  
     &::after {
@@ -97,8 +97,8 @@
 
 @include NOT-DESKTOP() {
   .info {
-    &__price {
-      text-align: center;
+    .button {
+      @include option(margin-bottom, 45);
     }
     &__decor {
       position: static;

@@ -4,7 +4,7 @@ const _ = require('lodash');
 const pxtorem = require('gulp-pxtorem');
 const sass = require('gulp-sass')(require('node-sass'));
 const csso = require('gulp-csso');
-const autoprefixer = require('gulp-autoprefixer');
+// const autoprefixer = require('gulp-autoprefixer');
 
 const browserSync = require('browser-sync');
 

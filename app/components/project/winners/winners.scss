@@ -1,7 +1,7 @@
 .winners {
   background: #0F3017;
   overflow: hidden;
-  @include option(padding, 168 157 81 157, 0 0 0 0);
+  @include option(padding, 168 157 81 157, 55 17 55 17);
   .swiper-container {
     overflow: visible;
     margin: 0;
@@ -29,14 +29,16 @@
     @include option(margin-bottom, 110, 35);
     align-self: center;
     display: flex;
+    align-items: center;
   }
   &__content {
+    @include wrapper(1620);
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: repeat(2, auto);
   }
   &__row-title  {
-    @include option(margin-bottom, 85, 30);
+    @include option(margin-bottom, 85, 33);
     display: flex;
     justify-content: space-between;
   }
@@ -77,13 +79,13 @@
     flex-direction: column;
   }
   &__list {
-    @include option(margin-bottom, 70, 25);
+    @include option(margin-bottom, 70, 28);
   }
   &__item {
     @include option(border-radius, 15);
     @include option(height, 630, 430);
     @include option(width, 465, 280);
-    max-width: 465px;
+    @include option(max-width, 465, 280);
     background: white;
     &-img {
       height: 72%;
@@ -93,7 +95,7 @@
       img {
         max-width: 100%;
         width: 100%;
-        height: auto;
+        height: 100%;
       }
     }
     &-text {
@@ -135,7 +137,9 @@
     }
     .swiper-pagination-bullet-active {
       opacity: 1;
-      transform: scale(1);
+      @include option(height, 14);
+      @include option(min-width, 14);
+      @include option(border-radius, 14);
       transition: all 0.1s linear;
 
       &-main,
@@ -152,7 +156,7 @@
       }
     } 
     .button {
-      @include option(margin-bottom, 36);
+      @include option(margin-bottom, 30);
       align-self: flex-start;
     }
     &__content {
@@ -168,6 +172,10 @@
       width: 100%;
       order: 3;
       justify-self: self-start;
+      margin-bottom: 0;
+    }
+    &__history-text {
+      line-height: 116%;
     }
   }
 }

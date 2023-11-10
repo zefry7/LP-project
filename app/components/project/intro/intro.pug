@@ -20,6 +20,10 @@ mixin intro(content)
             .intro__right-block
                 .intro__img-label 
                     img(src!=content.main.labelImg, alt="")
+        .intro__mobile-tv-row 
+            .intro__tv-img
+                +picture(content.main.tv.imgTV)
+            p.intro__tv-text!=content.main.tv.text
 
 mixin backgroundImg(content, param)
     div&attributes(attributes)

@@ -23,7 +23,8 @@
         z-index: 5;
     }
     &__content {
-        @include option(padding, 165 62 167 62, 0 0 0 0);
+        @include wrapper(1724);
+        @include option(padding, 165 62 167 62, 55 17 55 17);
         display: grid;
         grid-template-columns: 70% 30%;
         grid-template-rows: repeat(2, auto);
@@ -44,7 +45,7 @@
         }
     }
     &__row  {
-        @include option(margin-bottom, 125, 42);
+        @include option(margin-bottom, 125, 38);
         display: flex;
     }
     &__title {
@@ -65,20 +66,20 @@
         z-index: 5;
 
         &-text {
-            @include option(margin-right, 42);
-            @include option(width, 153);
+            @include option(margin-right, 42, 14);
+            @include option(width, 153, 139);
             color: #212121;
-            @include option(font-size, 24);
+            @include option(font-size, 24, 16);
             font-style: normal;
             font-weight: 600;
             line-height: 150%;
         }
-        &-img {
-            @include option(width, 68, 54);
-            img {
-              width: 100%;
-              height: 100%;
-            }
+    }
+    &__button-img {
+        @include option(width, 68, 54);
+        img {
+          width: 100%;
+          height: 100%;
         }
     }
     &__bottom-block {
@@ -94,23 +95,23 @@
     }
     &__column {
         @include option(max-width, 361, 280);
-        width: 100%;
+        width: 100% !important;
         @include option(height, 555, 430);
-        @include option(padding, 37 30 30 30, 20 15 15 15);
+        @include option(padding, 37 30 30 30, 20 15 15 21);
         @include option(border-radius, 15);
         background: #FFF;
     }
     &__img {
         @include option(margin-bottom, 54, 35);
-        @include option(width, 140, 82);
-        @include option(height, 130, 82);
+        @include option(width, 140, 76);
+        @include option(height, 130, 76);
         img {
             max-width: 100%;
             height: 100%;
         }
     }
     &__name {
-        @include option(margin-bottom, 12);
+        @include option(margin-bottom, 12, 8);
         @include option(width, 270, 244);
         color: #212121;
         @include option(font-size, 24, 23);
@@ -147,14 +148,13 @@
             width: 100%;
             order: 3;
             justify-self: start;
-            justify-content: space-between;
+            margin-bottom: 0;
         }
         &__name {
             width: 100%;
         }
-        &__video-text {
-            width: 100%;
-            margin-right: auto;
+        &__text {
+            @include option(width, 235);
         }
     }
 }

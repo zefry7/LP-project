@@ -1,13 +1,13 @@
 .download {
   background: #0F3017;
   &__content {
-    @include option(padding, 163 116 0 162, 0 0 0 0);
+    @include wrapper(1724);
+    @include option(padding, 163 116 0 162, 55 17 0 17);
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-    position: relative;
   }
   &__title {
-    @include option(margin-bottom, 134, 40);
+    @include option(margin-bottom, 134, 35);
     @include option(width, 943, 240);
     color: #FFF;
     @include option(font-size, 74, 26);
@@ -43,7 +43,7 @@
     z-index: 5;
   }
   &__item-text {
-    @include option(margin-bottom, 56, 33);
+    @include option(margin-bottom, 56, 30);
     display: flex;
     align-items: center;
     color:  #FFF;
@@ -61,7 +61,7 @@
     }
   }
   &__buttons-row {
-    @include option(padding, 165 20 165 20, 70 20 70 20);
+    @include option(padding, 165 20 165 20, 107 20 70 20);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,7 +115,7 @@
 @include NOT-DESKTOP() {
   .download {
     &__content {
-      @include option(padding-bottom, 534, 360);
+      @include option(padding-bottom, 534, 350);
     }
     &__buttons-row {
       flex-wrap: wrap;
@@ -137,7 +137,7 @@
       }
     }
     &__item-text {
-      justify-content: center;
+      @include option(width, 260);
     }
   }
 

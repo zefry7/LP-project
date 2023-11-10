@@ -1,5 +1,5 @@
 .join {
-  @include option(padding, 157 193 145 162, 0 0 0 0);
+  @include option(padding, 157 193 145 162, 55 17 53 17);
   overflow: hidden;
   background: #0F3017;
   .swiper-slide {
@@ -24,11 +24,12 @@
     opacity: 1;
   }
   .button {
-    @include option(margin-top, -60);
+    @include option(margin-top, -30);
     align-self: center;
   }
 
   &__content {
+    @include wrapper(1554);
     display: flex;
     flex-direction: column;
   }
@@ -52,13 +53,13 @@
     @include option(padding, 0 130 43 160, 0 0 43 0);
   }
   &__page-label {
-    @include option(margin-bottom, 19, 15);
+    @include option(margin-bottom, 19, 10);
     color: #FFF;
     @include option(font-size, 36, 25);
     font-style: normal;
     font-weight: 500;
     line-height: 130%; 
-    letter-spacing: -2px;
+    @include option(letter-spacing, -2, 0);
   }
   &__name {
     @include option(margin-bottom, 32, 15);
@@ -67,7 +68,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 130%; 
-    letter-spacing: -2px;
+    @include option(letter-spacing, -2, 0);
   }
   &__text {
     color: #FFF;
@@ -82,6 +83,7 @@
   &__img {
     img {
       width: 100%;
+      height: 100%;
     }
   }
   &__pagination {
@@ -118,13 +120,13 @@
       }
     }
     .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active {
-      @include option(height, 119, 60);
-      @include option(width, 119, 60);
-      @include option(max-width, 119, 60);
+      @include option(height, 119, 84);
+      @include option(width, 119, 84);
+      @include option(max-width, 119, 84);
       background: url(../../../images/join/display/icon-active-1.svg) center/ 50% no-repeat, linear-gradient(#E7C6B6, #E7C6B6); 
       &::after {
         transform: translateY(-50%);
-        @include option(margin-left, 150, 63);
+        @include option(margin-left, 150, 97);
       }
     }
     .swiper-pagination-bullet:nth-child(2) {
@@ -142,13 +144,13 @@
       }
     }
     .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
-      @include option(height, 119, 60);
-      @include option(width, 119, 60);
-      @include option(max-width, 119, 60);
+      @include option(height, 119, 84);
+      @include option(width, 119, 84);
+      @include option(max-width, 119, 84);
       background: url(../../../images/join/display/icon-active-2.svg) center/ 60% no-repeat, linear-gradient(#E7C6B6, #E7C6B6); 
       &::after {
         transform: translateY(-50%);
-        @include option(margin-left, 100, 63);
+        @include option(margin-left, 150, 97);
       }
     }
     .swiper-pagination-bullet:nth-child(3) {
@@ -166,22 +168,22 @@
       }
     }
     .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
-      @include option(height, 119, 60);
-      @include option(width, 119, 60);
-      @include option(max-width, 119, 60);
+      @include option(height, 119, 84);
+      @include option(width, 119, 84);
+      @include option(max-width, 119, 84);
       background: url(../../../images/join/display/icon-active-3.svg) center/ 80% no-repeat, linear-gradient(#E7C6B6, #E7C6B6); 
       &::after {
         transform: translateY(-50%);
-        @include option(margin-left, 150, 63);
+        @include option(margin-left, 150, 97);
       }
     }
     .swiper-pagination-bullet:nth-child(4) {
       background: url(../../../images/join/display/icon-4.svg) center/ 60% no-repeat;
     }
     .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet-active {
-      @include option(height, 119, 60);
-      @include option(width, 119, 60);
-      @include option(max-width, 119, 60);
+      @include option(height, 119, 84);
+      @include option(width, 119, 84);
+      @include option(max-width, 119, 84);
       background: url(../../../images/join/display/icon-active-4.svg) center/ 60% no-repeat, linear-gradient(#E7C6B6, #E7C6B6); 
     }
   }
@@ -192,9 +194,12 @@
     .swiper-slide {
       flex-direction: column;
     }
+    .carousel__item {
+      justify-content: start;
+    }
 
     &__block-text {
-      @include option(margin-bottom, 40);
+      @include option(margin-bottom, 35);
       width: 100%;
     }
 
@@ -203,7 +208,7 @@
 
       .swiper-pagination-bullet {
         display: none;
-        @include option(margin-right, 110);
+        @include option(margin-right, 105);
       }
   
       .swiper-pagination-bullet-active,
@@ -211,5 +216,11 @@
         display: inline-block;
       }
     }  
+    &__title {
+      @include option(width, 110);
+    }
+    &__text {
+      line-height: 144%;
+    }
   }
 }

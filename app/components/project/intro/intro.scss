@@ -1,5 +1,5 @@
 .intro {
-    @include option(height, 1080, 600);
+    @include option(height, 1080, 702);
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -16,6 +16,7 @@
     }
     .swiper-pagination {
         width: 45%;
+        @include option(bottom, 175, 133);
     }
 
     &__swiper-img {
@@ -75,7 +76,7 @@
         line-height: 100%; 
     }
     &__price {
-        @include option(margin-bottom, 87, 30);
+        @include option(margin-bottom, 87, 35);
         width: max-content;
         color: #350296;
         @include option(font-size, 74, 26);
@@ -114,13 +115,30 @@
         display: flex;
         align-items: center;
     }
+    &__mobile-tv-row {
+        background: #0F3017;
+        position: absolute;
+        bottom: 0;
+        height: max-content;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 102px;
+        .intro__tv-text {
+            color: white;
+        }
+    }
     &__tv-img {
-        @include option(margin-right, 28);
-        @include option(width, 67);
-        @include option(height, 67);
+        @include option(margin-right, 28, 18);
+        @include option(width, 67, 49);
+        @include option(height, 67, 49);
+        img {
+            height: 100%;
+        }
     }
     &__tv-text {
-        @include option(width, 270);
+        @include option(width, 270, 210);
         color:  #212121;
         @include option(font-size, 16);
         font-style: normal;
@@ -178,7 +196,7 @@
         position: absolute;
         @include option(bottom, 300, 60);
         right: 0;
-        @include option(font-size, 114, 36);
+        @include option(font-size, 114, 28);
         font-style: normal;
         font-weight: 800;
         line-height: 100%; 
@@ -195,6 +213,12 @@
             display: flex;
             flex-direction: column;
             @include option(padding-right, 160, 20);
+        }
+        &__price {
+            @include option(letter-spacing, 1.076)
+        }
+        &__mobile-tv-row {
+            display: flex;
         }
         &__tv-row {
             display: none;

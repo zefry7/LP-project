@@ -6,7 +6,13 @@
     @include option(width, 550);
   }
   &__pagination {
-    margin-top: -50px;
+    @include option(margin-top, -50, -12);
+    align-items: center;
+    @include option(margin-bottom, 90, 46);
+    align-self: center;
+    display: flex;
+    @include option(gap, 30, 17);
+    width: max-content;
   }
   .swiper-wrapper {
     @include option(height, 750, 430);
@@ -139,15 +145,9 @@
     transform: rotateX(180deg);
     background: url(../../../images/download/display/decor.svg) center/ 100% 100% no-repeat;
   }
-  &__pagination {
-    @include option(margin-bottom, 90, 46);
-    align-self: center;
-    display: flex;
-    @include option(gap, 30, 15);
-    width: max-content;
-  }
   &__content {
-    @include option(padding, 81 67 125 67, 0 0 0 0);
+    @include wrapper(1724px);
+    @include option(padding, 81 67 125 67, 55 20 60 20);
     display: flex;
     flex-direction: column;
     @include option(border-radius, 15);
@@ -250,6 +250,9 @@
     }
     &__content {
       border-radius: 0;
+      &::before {
+        display: none;
+      }
     }
     &__text {
       width: 100%;

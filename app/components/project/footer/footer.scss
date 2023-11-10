@@ -1,9 +1,9 @@
 .footer {
   background: #212121;
-  @include option(padding, 42 268 100 208, 0 0 0 0);
+  @include option(padding, 42 268 100 208, 30 20 56 20);
   .social-block__buttons {
     display: flex;
-    @include option(gap, 26);
+    @include option(gap, 26, 19);
   }
   .social-block__item {
     @include option(width, 36, 25);
@@ -14,6 +14,7 @@
     }
   }
   &__content {
+    @include wrapper(1600);
     display: flex;
     justify-content: space-between;
     @include option(gap, 100, 10);
@@ -38,7 +39,7 @@
   &__block-text {
     @include option(margin-bottom, 43, 21);
     .footer__text:not(:last-child) {
-      @include option(margin-bottom, 20, 10);
+      @include option(margin-bottom, 20, 12);
     }
   }
   &__text {
@@ -91,7 +92,7 @@
     }
   }
   &__text-center {
-    @include option(margin-bottom, 30, 10);
+    @include option(margin-bottom, 30, 3);
     color: #FFF;
     font-family: Roboto;
     @include option(font-size, 13.333, 8.2);
